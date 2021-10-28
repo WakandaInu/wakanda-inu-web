@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;800&display=swap');
+
+:root {
+  --btn-primary-bg-hover: #ee8c1f;
+  --dark-gray: #181818;
+  --bold-weight: 800;
+  --medium-weight: 500;
+  --bg-stars: url("../images/bg-stars.png");
+  --color-primary: #FF7D00;
+}
+
+
+body {
+  font-family: "Spartan", sans-serif;
+  color: #A1A0A1;
+  font-size: 18px;
+  font-weight: var(--medium-weight);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  background-color: #000;
+  padding: 2.8em 1.5em;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+  line-height: 1.25;
+}
+
+p {
+  line-height: 1.5;
+}
+
+footer {
+  background-color: var(--dark-gray);
+  padding: 1.5em;
+  color: #fff;
+}
+
+/* Utilities */
+
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-left: {
+  text-align: left !important;
+}
+.font-weight-bold {
+  font-weight: var(--bold-weight);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.btn-primary {
+  color: #fff;
+  background-color: #2A2A2A;
+  box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 1.75em 1.25em;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background-color: var(--btn-primary-bg-hover);
+  cursor: pointer;
+  transform: translate(0px, -5px);
+  color: #000;
+}
+.btn-primary:active {
+  background-color: var(--btn-primary-bg-hover);
+}
+.bg-stars {
+  background: var(--bg-stars);
+  background-image: var(--bg-stars);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* /utilities */
+
+/* General */
+.page-header {
+  background-color: #333232;
+  text-align: center;
+  padding: 0.75em 0;
+  font-size: 1.75em;
+}
+.page-header a {
+  color: var(--btn-primary-bg-hover);
+}
+
+.hero {
+  background-color: #000;
+}
+.hero h1 {
+  line-height: 50px;
+  letter-spacing: 0.04em;
+  font-weight: var(--bold-weight);
+  font-size: 1.8em;
+  color: #fff;
+}
+.hero img {
+  display: block;
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+.hero {
+  min-height: 500px;
+}
+.hero .subsection {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.waitlist-section h1 {
+  font-size: 2.5em;
+}
+
+.community-section {
+  background-color: var(--dark-gray);
+  min-height: 200px;
+}
+
+section h2 {
+  font-size: 2em;
+}
+/* /general */
+
+@media (min-width: 480px) {
+  .hero img {
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  .bg-stars {
+    background-attachment: fixed;
+  }
+
+  .hero {
+    flex-direction: row;
+    min-height: 600px;
+  }
+  .hero img {
+    order: 2;
+  }
+  .hero .subsection *:not(a) {
+    text-align: left;
+    max-width: 95%;
+  }
+  .hero .subsection a {
+    max-width: 50%;
+  }
+}

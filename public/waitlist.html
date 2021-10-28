@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wakanda Inu</title>
+  <link rel="stylesheet" href="assets/css/normalize.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .form {
+      padding: 0 1.75em;
+    }
+    .form button {
+      padding: 0.5em;
+      border-radius: 10px;
+      margin-top: 2em;
+    }
+    .form button:hover {
+      transform: unset !important;
+    }
+    input {
+      padding: 0.5em;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.0125em;
+    }
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: column;
+        min-height: unset; /* 500px */
+      }
+      .hero img {
+        width: 25%;
+        order: 0;
+      }
+      .hero .subsection {
+        min-height: unset;
+        display: block;
+      }
+      .hero .subsection * {
+        text-align: center !important;
+      }
+      .form {
+        width: 85%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2em;
+      }
+      .form button {
+        margin-top: 0;
+      }
+      .form input {
+        width: 45%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <a href="index.html">$wakanda</a>
+    </header>
+
+    <section id="hero" class="hero text-center">
+      <img src="assets/images/wakanda-inu-logo.svg" alt="logo">
+      <div class="subsection">
+        <p class="font-weight-bold text-primary">Wakanda Inu</p>
+        <h1>A Decentralized Meme Token for the African Inu</h1>
+        <p>Built as a charity-oriented meme token that is completely for
+        charity across Africa. Welcome to <span class="text-primary">WAKANDA</span></p>
+      </div>
+      <form id="form" class="form">
+        <input type="email" placeholder="EMAIL" required>
+        <button class="btn-primary" type="submit">JOIN WAITLIST</button>
+      </form>
+    </section>
+
+    <section class="waitlist-section text-center bg-stars">
+      <h1>The World needs <span class="text-primary">$WKD</span></h1>
+      <p class="text-muted">To get <span class="text-primary">$wakanda</span>
+      token, join the community to become eligible for whitelisting before fair
+      launch on DEX</p>
+    </section>
+
+    <section class="community-section">
+      <h2>community</h2>
+      <p>Our community grows stronger every day. Please follow our social
+      platforms to get the most up-to-date, accurate <span class="text-primary">
+      WAKANDA</span> information.</p>
+    </section>
+
+    <footer>
+      &copy; Copyright 2021
+    </footer>
+</main>
+</body>
+</html>
