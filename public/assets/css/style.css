@@ -331,13 +331,25 @@ footer {
   .page-header nav {
     display: flex;
     height: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
   }
-  .home-link {
-    padding-top: 1em;
+  .page-header .home-link {
+    display: flex;
+    align-items: center;
     padding-left: var(--section-padding-x-desktop);
   }
+  .page-header .logo-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.75em;
+  }
+  .page-header .logo-text span:first-of-type {
+    margin-bottom: 0.5em;
+    font-size: 0.7em;
+  }
   .page-header nav a {
-    padding: 1.75em 1em;
+    padding: 0 1em;
     transition: color 0.2s ease-in-out;
     font-size: 0.8em;
   }
