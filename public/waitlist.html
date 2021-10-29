@@ -10,17 +10,23 @@
   <style>
     .form {
       padding: 0 1.75em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+    .form button,
+    .form input {
+      padding: 0.75em;
+      line-height: 1em;
     }
     .form button {
-      padding: 0.5em;
+      border: 1px solid transparent;
       border-radius: 10px;
-      margin-top: 2em;
-    }
-    .form button:hover {
-      transform: unset !important;
+      width: 75%;
+      margin: 2em auto 0 auto;
     }
     input {
-      padding: 0.5em;
       border: none;
       border-radius: 5px;
       font-size: 1.0125em;
@@ -42,14 +48,15 @@
         text-align: center !important;
       }
       .form {
-        width: 85%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
         margin-top: 2em;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
       }
       .form button {
-        margin-top: 0;
+        margin: 0;
+        width: unset;
       }
       .form input {
         width: 45%;
@@ -60,7 +67,7 @@
 <body>
   <main>
     <header class="page-header">
-      <a href="index.html">$wakanda</a>
+      <a href="index.html">$WKD</a>
     </header>
 
     <section id="hero" class="hero text-center">
@@ -79,7 +86,7 @@
 
     <section class="waitlist-section text-center bg-stars">
       <h1>The World needs <span class="text-primary">$WKD</span></h1>
-      <p class="text-muted">To get <span class="text-primary">$wakanda</span>
+      <p class="text-muted">To get <span class="text-primary">$WKD</span>
       token, join the community to become eligible for whitelisting before fair
       launch on DEX</p>
     </section>
@@ -88,7 +95,7 @@
       <h2>community</h2>
       <p>Our community grows stronger every day. Please follow our social
       platforms to get the most up-to-date, accurate <span class="text-primary">
-      WAKANDA</span> information.</p>
+      $WKD</span> information.</p>
     </section>
 
     <footer>
