@@ -57,6 +57,7 @@
       border-radius: 25px;
       box-shadow: 6px 7px 4px 3px rgba(0, 0, 0, 0.25);
       padding: 0.25em 1em 1em 1em;
+      position: relative;
     }
     .roadmap-card:not(:last-of-type) {
       margin-bottom: 2em;
@@ -82,6 +83,58 @@
       }
       .tokenomics-section p {
         text-align: center;
+      }
+      .roadmap-card-section {
+        max-width: 80%;
+      }
+      .roadmap-card {
+        padding-top: 1.5em;
+        padding-bottom: 3em;
+      }
+    }
+    @media (min-width:  992px) {
+      .roadmap-card-section {
+        position: relative;
+        max-width: 100%;
+      }
+      .roadmap-card-section,
+      .roadmap-card {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+      }
+      .roadmap-card-section:after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+      .roadmap-card:after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: 421px;
+        background-color: #FAAA33;
+        border: 8px solid #000;
+        top: -2px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .roadmap-card:nth-child(even):after {
+        right: -65px;
+      }
+      .roadmap-card {
+        text-align: left;
+        left: 54%;
+        width: 40%;
+        padding-top: 1em;
+      }
+      .roadmap-card:nth-child(even) {
+        left: 10px;
       }
     }
   </style>
@@ -127,7 +180,7 @@
 
     <section class="tokenomics-section">
       <h2>tokenomics</h2>
-      <p>We are a sustainable and decentralized project that distributes wealth
+      <p class="text-show-mobile">We are a sustainable and decentralized project that distributes wealth
       where it needs to be.</p>
       <div class="tokenomics-card-section">
         <div class="tokenomics-card">
@@ -139,6 +192,8 @@
           <span>Annual BURNING</span>
         </div>
       </div>
+      <p class="text-show-desktop">We are a sustainable and decentralized project that distributes wealth
+      where it needs to be.</p>
       <div class="details">
         <p>Total Suppy: 1 Quadrillion Max Supply</p>
         <p>750T (Treasury/Reserve) to be BURN within 5 years.</p>

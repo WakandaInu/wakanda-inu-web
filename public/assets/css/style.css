@@ -190,15 +190,16 @@ footer {
   .bg-stars {
     background-attachment: fixed;
   }
-.tokenomics-section h2:before,
-.community-section h2:before {
-  content: '';
-  height: 5px;
-  background-color: #A8A8A8;
-  display: block;
-  border-radius: 5px;
-  margin-bottom: 8px;
-}
+
+  .tokenomics-section h2:before,
+  .community-section h2:before {
+    content: '';
+    height: 5px;
+    background-color: #A8A8A8;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 8px;
+  }
 
   .hero {
     flex-direction: row;
