@@ -64,6 +64,9 @@
     .roadmap-card:nth-child(even) h3 {
       text-align: right;
     }
+    .hero .community-subsection {
+      display: none;
+    }
     @media (min-width: 768px) {
       .tokenomics-card-section {
         flex-direction: row;
@@ -90,14 +93,27 @@
 
   <main>
     <section class="hero text-center">
-      <img src="assets/images/wakanda-inu-logo.svg" alt="logo">
+      <img class="logo" src="assets/images/wakanda-inu-logo.svg" alt="logo">
       <div class="subsection">
         <p class="font-weight-bold text-primary">Wakanda Inu</p>
         <h1>A Decentralized Meme Token for the African Inu</h1>
         <p>Built as a charity-oriented meme token that is completely for
         charity across Africa. Welcome to <span class="text-primary">WAKANDA</span>
         </p>
-        <a class="btn-primary">Panthers Word v1</a>
+        <a class="btn-primary paper-link">Panthers Word v1</a>
+        <div class="community-subsection">
+          <p>Join Community</p>
+          <div class="community-link-subsection">
+            <a href="https://t.me/wakandainu" target="_blank" class="community-link">
+              <img src="assets/images/logos-telegram.svg" alt="Telegram logo">
+              <span>Telegram</span>
+            </a>
+            <a href="https://twitter.com/Wakandainu" target="_blank" class="community-link">
+              <img src="assets/images/logos-twitter.svg" alt="Twitter logo">
+              <span>Twitter</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -164,10 +180,28 @@
     </section>
 
     <section class="community-section">
-      <h2>community</h2>
-      <p>Our community grows stronger every day. Please follow our social
-      platforms to get the most up-to-date, accurate <span class="text-primary">
-      $WKD</span> information.</p>
+      <div class="community-section-content">
+        <div class="community-section-heading">
+          <h2>community</h2>
+        </div>
+        <p>Our community grows stronger every day. Please follow our social
+        platforms to get the most up-to-date, accurate <span class="text-primary">
+        $WKD</span> information.</p>
+      </div>
+      <div class="community-link-subsection">
+        <a href="https://t.me/wakandainu" target="_blank" class="community-link">
+          <img src="assets/images/logos-telegram.svg" alt="Telegram logo">
+          <span>Telegram</span>
+        </a>
+        <a href="https://twitter.com/Wakandainu" target="_blank" class="community-link">
+          <img src="assets/images/logos-twitter.svg" alt="Twitter logo">
+          <span>Twitter</span>
+        </a>
+        <a href="mailto:partner@wakandainu.com" target="_blank" class="community-link">
+          <img src="assets/images/logos-mail.svg" alt="Mail logo">
+          <span>Email</span>
+        </a>
+      </div>
     </section>
   </main>
 

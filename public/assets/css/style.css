@@ -47,6 +47,10 @@ p {
   line-height: 1.5;
 }
 
+section h2 {
+  font-size: 2em;
+}
+
 footer {
   background-color: var(--dark-gray);
   padding: 1.5em;
@@ -117,7 +121,7 @@ footer {
   font-size: 1.8em;
   color: #fff;
 }
-.hero img {
+.hero .logo {
   display: block;
   width: 70%;
   height: auto;
@@ -142,6 +146,50 @@ footer {
   margin-right: auto;
   font-weight: var(--medium-weight);
 }
+.community-link-subsection {
+  display: flex;
+}
+.community-link {
+  display: flex;
+  align-items: center;
+  font-size: 0.7em;
+  color: #55acee;
+
+  padding: 0.75em;
+  border: 1px solid #414141;
+  width: 125px !important;
+  border-radius: 8px;
+  justify-content: space-evenly;
+  transition: color 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+.community-link:not(:last-of-type) {
+  margin-right: 1.75em;
+}
+.community-link:hover {
+  color: #fff;
+  filter: grayscale(1);
+}
+.community-link img {
+  width: 35px;
+  height: auto;
+  order: 0;
+}
+.community-section {
+  background-color: var(--dark-gray);
+  min-height: 200px;
+}
+/* /general */
+
+@media (min-width: 480px) {
+  .hero .logo {
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  .bg-stars {
+    background-attachment: fixed;
+  }
 .tokenomics-section h2:before,
 .community-section h2:before {
   content: '';
@@ -152,39 +200,40 @@ footer {
   margin-bottom: 8px;
 }
 
-.community-section {
-  background-color: var(--dark-gray);
-  min-height: 200px;
-}
-
-section h2 {
-  font-size: 2em;
-}
-/* /general */
-
-@media (min-width: 480px) {
-  .hero img {
-    width: 40%;
-  }
-}
-
-@media (min-width: 768px) {
-  .bg-stars {
-    background-attachment: fixed;
-  }
-
   .hero {
     flex-direction: row;
     min-height: 600px;
   }
-  .hero img {
+  .hero .logo {
     order: 2;
   }
-  .hero .subsection *:not(a) {
+  .hero .subsection *:not(.paper-link) {
     text-align: left;
     max-width: 95%;
   }
-  .hero .subsection a {
+  .hero .subsection .paper-link {
     max-width: 50%;
+  }
+  .community-section {
+    padding-bottom: 1em;
+  }
+  .community-section-content {
+    display: flex;
+  }
+  .community-section-heading {
+    width: 75%;
+  }
+  .community-section-heading h2 {
+    width: 6em;
+  }
+  .community-section-content p {
+    width: 75%;
+  }
+  .community-subsection {
+    display: block !important;
+    margin-top: 2em;
+  }
+  .community-section .community-content {
+    margin-bottom: 4em;
   }
 }
