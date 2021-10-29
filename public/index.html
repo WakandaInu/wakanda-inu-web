@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="assets/css/normalize.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-  <title>Wakanda Inu</title>
+  <title>Wakanda Inu - A Decentralized Meme Token</title>
   <style type="text/css">
     .tokenomics-section {
       background-color: var(--dark-gray);
@@ -69,20 +69,46 @@
       display: none;
     }
     @media (min-width: 768px) {
-      .tokenomics-card-section {
-        flex-direction: row;
-        width: 75%;
-        display: flex;
-        justify-content: space-evenly;
+      .tokenomics-section .preample {
+        width: 100%;
       }
-      .tokenomics-card:first-of-type {
-        margin: 0;
+      .tokenomics-content {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .tokenomics-content .details {
+        width: 42%;
+      }
+      .tokenomics-section .preample {
+        display: flex;
+      }
+      .tokenomics-section .preample p {
+        flex: 0 0 42%;
       }
       .tokenomics-section .details {
-        text-align: center;
+        margin-top: 1.2em;
+      }
+      .tokenomics-card-section {
+        flex-direction: row;
+        margin: 0;
+        padding-top: 1.8em;
+        justify-content: space-between;
+      }
+      .tokenomics-card {
+        flex: 0 0 150px;
+        height: 200px;
+        margin-bottom: 0 !important;
+      }
+      .tokenomics-card span {
+        font-size: 1.125em;
+      }
+      .tokenomics-card:first-of-type {
+        margin-right: 2.5em;
       }
       .tokenomics-section p {
-        text-align: center;
+        text-align: left;
       }
       .roadmap-card-section {
         max-width: 80%;
@@ -93,6 +119,11 @@
       }
     }
     @media (min-width:  992px) {
+      .tokenomics-card {
+        flex: 0 0 250px;
+        height: 250px;
+        font-size: 1.0125em;
+      }
       .roadmap-card-section {
         position: relative;
         max-width: 100%;
@@ -140,20 +171,42 @@
   </style>
 </head>
 <body>
-  <header class="page-header">
-    <a href="index.html">$WKD</a>
-  </header>
+    <header class="page-header">
+      <a href="index.html" class="home-link">
+        <img class="logo" src="assets/images/wakanda-inu-logo.svg" alt="logo">
+        <div class="logo-text">
+          <span class="text-primary">Wakanda Inu</span>
+          <span>The African Dog</span>
+        </div>
+      </a>
+      <button class="hamburger-btn">
+        <img
+          src="assets/images/menu-hamburger.svg"
+          width="50"
+          height="50"
+          alt="menu toggle button"
+        >
+      </button>
+      <nav class="">
+        <button>close</button>
+        <a href="#">Buy</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#panthersword">Panthers Word</a>
+        <a href="#community">Community</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+    </header>
 
   <main>
     <section class="hero text-center">
       <img class="logo" src="assets/images/wakanda-inu-logo.svg" alt="logo">
       <div class="subsection">
         <p class="font-weight-bold text-primary">Wakanda Inu</p>
-        <h1>A Decentralized Meme Token for the African Inu</h1>
+        <h1>A Decentralized Meme Token</h1>
         <p>Built as a charity-oriented meme token that is completely for
         charity across Africa. Welcome to <span class="text-primary">WAKANDA</span>
         </p>
-        <a class="btn-primary paper-link">Panthers Word v1</a>
+        <a id="panthersword" class="btn-primary paper-link">The Panthers Words</a>
         <div class="community-subsection">
           <p>Join Community</p>
           <div class="community-link-subsection">
@@ -178,37 +231,39 @@
       <a class="btn-primary" href="waitlist.html">Join WAITLIST</a>
     </section>
 
-    <section class="tokenomics-section">
-      <h2>tokenomics</h2>
-      <p class="text-show-mobile">We are a sustainable and decentralized project that distributes wealth
-      where it needs to be.</p>
-      <div class="tokenomics-card-section">
-        <div class="tokenomics-card">
-          <img src="assets/images/locked-liquidity-image.svg" alt="locked liquidity image">
-          <span>Locked Liquidity on UNISWAP</span>
-        </div>
-        <div class="tokenomics-card">
-          <img src="assets/images/annual-burning-image.svg" alt="annual burning image">
-          <span>Annual BURNING</span>
-        </div>
+    <section id="tokenomics" class="tokenomics-section">
+      <div class="preample">
+        <h2>tokenomics</h2>
+        <p>We are a sustainable and decentralized project that distributes wealth
+        where it needs to be.</p>
       </div>
-      <p class="text-show-desktop">We are a sustainable and decentralized project that distributes wealth
-      where it needs to be.</p>
-      <div class="details">
-        <p>Total Suppy: 1 Quadrillion Max Supply</p>
-        <p>750T (Treasury/Reserve) to be BURN within 5 years.</p>
-        <p class="font-weight-bold">12.5T token burn every 7th day of the month.</p>
-        <p>Allocation of <span class="font-weight-bold">250T</span> tokens:</p>
-        <p>Marketing: 20%</p>
-        <p>Development: 10%</p>
-        <p>Public sale: 36%</p>
-        <p>Liquidity: 30%</p>
-        <p>Charity: 4%</p>
+      <div class="tokenomics-content">
+        <div class="tokenomics-card-section">
+          <div class="tokenomics-card">
+            <img src="assets/images/locked-liquidity-image.svg" alt="locked liquidity image">
+            <span>Locked Liquidity on PancakeSwap</span>
+          </div>
+          <div class="tokenomics-card">
+            <img src="assets/images/annual-burning-image.svg" alt="annual burning image">
+            <span>Annual BURNING</span>
+          </div>
+        </div>
+        <div class="details">
+          <p>Max Supply: 1,000,000,000,000,000</p>
+          <p>Reserve: 750,000,000,000,000 (Monthly burn for 5 years)</p>
+          <p>Total Supply: 250,000,000,000,000</p>
+          <p>Allocation of total supply:</p>
+          <p>Marketing - 20%</p>
+          <p>Development - 10%</p>
+          <p>Public sale - 36%</p>
+          <p>Liquidity - 30%</p>
+          <p>Charity - 4%</p>
+        </div>
       </div>
       <p>MARKETING, DEVELOPMENT SUPPLY HAVE 5 YEARS LOCKUP VESTING</p>
     </section>
 
-    <section class="roadmap-section bg-stars">
+    <section id="roadmap" class="roadmap-section bg-stars">
       <h2 class="text-center">WAKANDA FOREVER</h2>
       <div class="roadmap-card-section">
         <div class="roadmap-card">
@@ -234,7 +289,7 @@
       </div>
     </section>
 
-    <section class="community-section">
+    <section id="community" class="community-section">
       <div class="community-section-content">
         <div class="community-section-heading">
           <h2>community</h2>
@@ -252,6 +307,10 @@
           <img src="assets/images/logos-twitter.svg" alt="Twitter logo">
           <span>Twitter</span>
         </a>
+        <a href="https://fb.me/Wakandainu" target="_blank" class="community-link">
+          <img src="assets/images/logos-facebook.svg" alt="Facebook logo">
+          <span>Facebook</span>
+        </a>
         <a href="mailto:partner@wakandainu.com" target="_blank" class="community-link">
           <img src="assets/images/logos-mail.svg" alt="Mail logo">
           <span>Email</span>
@@ -263,5 +322,25 @@
   <footer>
     &copy; Copyright 2021
   </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var nav = document.querySelector('.page-header nav');
+
+      document.querySelector('.page-header .hamburger-btn').addEventListener('click', function () {
+        nav.classList.add('show');
+      });
+
+      document.querySelectorAll('.page-header nav a').forEach(function (elm) {
+        elm.addEventListener('click', function (event) {
+          nav.classList.remove('show');
+        });
+      });
+
+      document.querySelector('.page-header nav button').addEventListener('click', function () {
+        nav.classList.remove('show');
+      });
+    });
+  </script>
 </body>
 </html>

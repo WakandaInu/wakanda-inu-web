@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wakanda Inu</title>
   <link rel="stylesheet" href="assets/css/normalize.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-  <style>
+  <title>Wakanda Inu - A Decentralized Meme Token</title>
+  <style type="text/css">
     .form {
       padding: 0 1.75em;
       display: flex;
@@ -23,7 +23,7 @@
     .form button {
       border: 1px solid transparent;
       border-radius: 10px;
-      width: 75%;
+      width: 40%;
       margin: 2em auto 0 auto;
     }
     input {
@@ -36,9 +36,9 @@
         flex-direction: column;
         min-height: unset; /* 500px */
       }
-      .hero img {
+      .hero .logo {
         width: 25%;
-        order: 0;
+        order: 0 !important;
       }
       .hero .subsection {
         min-height: unset;
@@ -62,19 +62,50 @@
         width: 45%;
       }
     }
+    @media (min-width: 992px) {
+      .hero {
+        padding-right: 10em !important;
+        padding-left: 10em !important;
+      }
+      .form {
+        max-width: 75%;
+        justify-content: space-evenly;
+      }
+    }
   </style>
 </head>
 <body>
-  <main>
     <header class="page-header">
-      <a href="index.html">$WKD</a>
+      <a href="index.html" class="home-link">
+        <img class="logo" src="assets/images/wakanda-inu-logo.svg" alt="logo">
+        <div class="logo-text">
+          <span class="text-primary">Wakanda Inu</span>
+          <span>The African Dog</span>
+        </div>
+      </a>
+      <button class="hamburger-btn">
+        <img
+          src="assets/images/menu-hamburger.svg"
+          width="50"
+          height="50"
+          alt="menu toggle button"
+        >
+      </button>
+      <nav class="">
+        <button>close</button>
+        <a href="#">Buy</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#panthersword">Panthers Word</a>
+        <a href="#community">Community</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
     </header>
-
+  <main>
     <section id="hero" class="hero text-center">
       <img class="logo" src="assets/images/wakanda-inu-logo.svg" alt="logo">
       <div class="subsection">
         <p class="font-weight-bold text-primary">Wakanda Inu</p>
-        <h1>A Decentralized Meme Token for the African Inu</h1>
+        <h1>A Decentralized Meme Token</h1>
         <p>Built as a charity-oriented meme token that is completely for
         charity across Africa. Welcome to <span class="text-primary">WAKANDA</span></p>
       </div>
@@ -92,15 +123,57 @@
     </section>
 
     <section class="community-section">
-      <h2>community</h2>
-      <p>Our community grows stronger every day. Please follow our social
-      platforms to get the most up-to-date, accurate <span class="text-primary">
-      $WKD</span> information.</p>
+      <div class="community-section-content">
+        <div class="community-section-heading">
+          <h2>community</h2>
+        </div>
+        <p>Our community grows stronger every day. Please follow our social
+        platforms to get the most up-to-date, accurate <span class="text-primary">
+        $WKD</span> information.</p>
+      </div>
+      <div class="community-link-subsection">
+        <a href="https://t.me/wakandainu" target="_blank" class="community-link">
+          <img src="assets/images/logos-telegram.svg" alt="Telegram logo">
+          <span>Telegram</span>
+        </a>
+        <a href="https://twitter.com/Wakandainu" target="_blank" class="community-link">
+          <img src="assets/images/logos-twitter.svg" alt="Twitter logo">
+          <span>Twitter</span>
+        </a>
+        <a href="https://fb.me/Wakandainu" target="_blank" class="community-link">
+          <img src="assets/images/logos-facebook.svg" alt="Facebook logo">
+          <span>Facebook</span>
+        </a>
+        <a href="mailto:partner@wakandainu.com" target="_blank" class="community-link">
+          <img src="assets/images/logos-mail.svg" alt="Mail logo">
+          <span>Email</span>
+        </a>
+      </div>
     </section>
 
     <footer>
       &copy; Copyright 2021
     </footer>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        var nav = document.querySelector('.page-header nav');
+
+        document.querySelector('.page-header .hamburger-btn').addEventListener('click', function () {
+          nav.classList.add('show');
+        });
+
+        document.querySelectorAll('.page-header nav a').forEach(function (elm) {
+          elm.addEventListener('click', function (event) {
+            nav.classList.remove('show');
+          });
+        });
+
+        document.querySelector('.page-header nav button').addEventListener('click', function () {
+          nav.classList.remove('show');
+        });
+      });
+    </script>
 </main>
 </body>
 </html>
