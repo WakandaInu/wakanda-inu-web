@@ -24,6 +24,10 @@ body {
   font-weight: var(--medium-weight);
 }
 
+main {
+  padding-top: 4em;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -108,9 +112,16 @@ footer {
 /* General */
 .page-header {
   background-color: var(--dark-gray);
-  padding: 0.75em;
+  padding: 0.75em 0;
   display: flex;
   justify-content: space-between;
+
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.page-header .home-link {
+  margin-left: 0.75em;
 }
 .page-header .hamburger-btn {
   background-color: transparent;
@@ -176,7 +187,7 @@ footer {
   line-height: 50px;
   letter-spacing: 0.04em;
   font-weight: var(--bold-weight);
-  font-size: 2.5em;
+  font-size: 1.8em;
   color: #fff;
 }
 .hero .logo {
@@ -247,6 +258,13 @@ footer {
 @media (min-width: 480px) {
   .hero .logo {
     width: 70%;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero h1 {
+    font-size: 3em;
+    line-height: 1.25;
   }
 }
 
@@ -324,6 +342,15 @@ footer {
   .community-section .community-content {
     margin-bottom: 4em;
   }
+}
+
+@media (min-width: 992px) {
+  .text-show-mobile {
+    display: none;
+  }
+  .text-show-desktop {
+    display: block;
+  }
 
   .page-header {
     padding: 0;
@@ -348,8 +375,12 @@ footer {
     margin-bottom: 0.5em;
     font-size: 0.7em;
   }
+  .page-header nav {
+    padding-top:  0;
+    padding-bottom: 0;
+  }
   .page-header nav a {
-    padding: 0 1em;
+    padding: 1.75em 1em;
     transition: color 0.2s ease-in-out;
     font-size: 0.8em;
   }
@@ -363,7 +394,7 @@ footer {
     display: block;
     border-radius: 120%;
     margin: 0.5em auto 0 auto;
-    transition: background-color 0.2s ease-in-out, width 0.3s ease-in;
+    transition: background-color 0.2s ease-in-out, width 0.25s ease-in-out;
   }
   .page-header nav a:hover:after {
     width: 70%;
@@ -375,14 +406,5 @@ footer {
   .page-header nav button,
   .hamburger-btn {
     display: none;
-  }
-}
-
-@media (min-width: 992px) {
-  .text-show-mobile {
-    display: none;
-  }
-  .text-show-desktop {
-    display: block;
   }
 }
