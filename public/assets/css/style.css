@@ -101,8 +101,7 @@ footer {
 .bg-stars {
   background: var(--bg-stars);
   background-image: var(--bg-stars);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: contain;
 }
 .text-show-desktop {
   display: none;
