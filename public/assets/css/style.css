@@ -1,4 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;800&display=swap');
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+main {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+a {
+    background-color: transparent
+}
+
+img {
+    border-style: none
+}
+
+button,input,optgroup,select,textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,input {
+    overflow: visible
+}
+
+button,select {
+    text-transform: none
+}
+
+[type=button],[type=reset],[type=submit],button {
+    -webkit-appearance: button
+}
 
 :root {
   --btn-primary-bg-hover: #ee8c1f;
@@ -10,11 +54,6 @@
   --section-padding-x: 1.5em;
   --section-padding-x-desktop: 5em;
   --nav-link-color:  #FC7F58;
-}
-
-::selection {
-  background-color: var(--btn-primary-bg-hover);
-  color: #000;
 }
 
 body {
@@ -68,12 +107,6 @@ footer {
 .text-center {
   text-align: center !important;
 }
-.text-right {
-  text-align: right !important;
-}
-.text-left: {
-  text-align: left !important;
-}
 .font-weight-bold {
   font-weight: var(--bold-weight);
 }
@@ -89,22 +122,10 @@ footer {
   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
   text-decoration: none;
 }
-.btn-primary:hover {
-  background-color: var(--btn-primary-bg-hover);
-  cursor: pointer;
-  transform: translate(0px, -5px);
-  color: #000;
-}
-.btn-primary:active {
-  background-color: var(--btn-primary-bg-hover);
-}
 .bg-stars {
   background: var(--bg-stars);
   background-image: var(--bg-stars);
   background-size: contain;
-}
-.text-show-desktop {
-  display: none;
 }
 /* /utilities */
 
@@ -126,50 +147,6 @@ footer {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-.page-header nav.show {
-  position: fixed;
-  display: flex;
-  background-color: var(--dark-gray);
-  height: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1.2em;
-  z-index:  9999;
-}
-.page-header nav.show a {
-  margin: 0 auto;
-  font-size: 1.5em;
-  line-height: 1.5;
-  display: block;
-  border-bottom: 3px solid #555;
-  width: 80%;
-  text-align: center;
-  padding-bottom: 0.28em
-}
-.page-header nav.show a:active,
-.page-header nav.show a:hover {
-  border-color: var(--nav-link-color);
-  color: var(--nav-link-color);
-}
-.page-header nav.show a:not(:last-of-type) {
-  margin-bottom: 1.8em
-}
-.page-header nav.show button {
-  font-size: 1em;
-  text-transform: uppercase;
-  padding: 1em;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  display: block;
-  margin-left: auto;
-  margin-bottom: 1em;
-  margin-right: .5em;
 }
 .page-header .logo {
   width: 50px;
@@ -240,9 +217,6 @@ footer {
 .community-link:not(:last-of-type) {
   margin-right: 2.5em;
 }
-.community-link:hover {
-  filter: grayscale(0);
-}
 .community-link img {
   width: 35px;
   height: auto;
@@ -302,11 +276,6 @@ footer {
     border-radius: 8px;
     filter: grayscale(0);
   }
-  .community-link:hover,
-  .community-link:active {
-    filter: grayscale(1);
-    color: #fff;
-  }
   .community-link span {
     display: inline;
   }
@@ -332,19 +301,9 @@ footer {
     display: block !important;
     margin-top: 2em;
   }
-  .community-section .community-content {
-    margin-bottom: 4em;
-  }
 }
 
 @media (min-width: 992px) {
-  .text-show-mobile {
-    display: none;
-  }
-  .text-show-desktop {
-    display: block;
-  }
-
   .page-header {
     padding: 0;
   }
@@ -377,9 +336,6 @@ footer {
     transition: color 0.2s ease-in-out;
     font-size: 0.8em;
   }
-  .page-header nav a:hover {
-    color: var(--nav-link-color);
-  }
   .page-header nav a:after {
     content: '';
     width: 0;
@@ -388,10 +344,6 @@ footer {
     border-radius: 120%;
     margin: 0.5em auto 0 auto;
     transition: background-color 0.2s ease-in-out, width 0.25s ease-in-out;
-  }
-  .page-header nav a:hover:after {
-    width: 70%;
-    background-color: var(--nav-link-color);
   }
   .page-header nav a:last-of-type {
     padding-right: var(--section-padding-x-desktop)
