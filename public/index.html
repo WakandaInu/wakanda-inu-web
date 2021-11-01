@@ -40,18 +40,38 @@
         width: 100%;
       }
 
+      .roadmap-section {
+        padding-right: 0;
+        padding-left: 0;
+      }
       .roadmap-card {
         background-color: rgba(96, 96, 96, 0.35);
         border-radius: 25px;
         box-shadow: 6px 7px 4px 3px rgba(0, 0, 0, 0.25);
-        padding: 0.25em 1em 1em 1em;
+        padding: 0;
+        padding-bottom: 1em;
         position: relative;
       }
       .roadmap-card:not(:last-of-type) {
         margin-bottom: 2em;
       }
+      .roadmap-card {
+        padding-top: 1.5em;
+      }
+      .roadmap-card ul {
+        line-height: 2.25;
+        font-size: 0.8em;
+        color: #fff;
+        padding-right: 1em;
+      }
+      .roadmap-card ul {
+        padding-right: 0.5em;
+      }
       .roadmap-card:nth-child(even) h3 {
         text-align: right;
+      }
+      .roadmap-card-section {
+        max-width: 90%;
       }
       .hero .community-subsection {
         display: none;
@@ -59,10 +79,6 @@
       @media (min-width: 768px) {
         .roadmap-card-section {
           max-width: 80%;
-        }
-        .roadmap-card {
-          padding-top: 1.5em;
-          padding-bottom: 3em;
         }
         .tokenomics-section .mobile {
           display: none;
@@ -96,7 +112,7 @@
           position: absolute;
           width: 25px;
           height: 25px;
-          right: 421px;
+          right: 420px;
           background-color: #faaa33;
           border: 8px solid #000;
           top: -2px;
@@ -104,7 +120,7 @@
           z-index: 1;
         }
         .roadmap-card:nth-child(even):after {
-          right: -65px;
+          right: -110px;
         }
         .roadmap-card {
           text-align: left;
@@ -242,12 +258,14 @@
             loading="lazy"
             width="547"
             height="467"
+            alt="tokenomics chart"
           />
           <img
             src="assets/images/tokenomics-legend.png"
             loading="lazy"
             width="511"
             height="806"
+            alt="tokenomics chart key/legend"
           />
         </div>
         <div class="desktop">
@@ -256,6 +274,7 @@
             loading="lazy"
             width="1394"
             height="806"
+            alt="tokenomics full chart"
           />
         </div>
       </section>
@@ -264,32 +283,34 @@
         <h2 class="text-center">WAKANDA FOREVER</h2>
         <div class="roadmap-card-section">
           <div class="roadmap-card">
-            <h3>Q1</h3>
-            <p>
-              We are a sustainable and decentralized project that distributes
-              wealth where it needs to be.
-            </p>
+            <ul>
+              <li>Building the ecosystem.</li>
+              <li>Core team developer and other units.</li>
+              <li>Website launch.</li>
+              <li>Public Sale.</li>
+              <li>Pancakeswap listing.</li>
+            </ul>
           </div>
           <div class="roadmap-card">
-            <h3>Q2</h3>
-            <p>
-              We are a sustainable and decentralized project that distributes
-              wealth where it needs to be.
-            </p>
+            <ul>
+              <li>Liquidity provider and locking.</li>
+              <li>Burning of 12.5T from the treasury.</li>
+              <li>Coingecko and coinmarketcap listing.</li>
+              <li>Auditing.</li>
+              <li>
+                Marketing, referral campaign, advertising and promotion, KOL,
+                Wakanda Machinery, Wakanda legend, Wakanda panther.
+              </li>
+            </ul>
           </div>
           <div class="roadmap-card">
-            <h3>Q3</h3>
-            <p>
-              We are a sustainable and decentralized project that distributes
-              wealth where it needs to be.
-            </p>
-          </div>
-          <div class="roadmap-card">
-            <h3>Q4</h3>
-            <p>
-              We are a sustainable and decentralized project that distributes
-              wealth where it needs to be.
-            </p>
+            <ul>
+              <li>Centralized exchange discussion and listing.</li>
+              <li>
+                Community vote on what to build among (NFT, FARMING STAKING, DEX
+                ,etc).
+              </li>
+            </ul>
           </div>
         </div>
       </section>
