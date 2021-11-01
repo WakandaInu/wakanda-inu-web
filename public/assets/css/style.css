@@ -1,47 +1,56 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    margin: 0
+  margin: 0;
 }
 
 main {
-    display: block
+  display: block;
 }
 
 h1 {
-    font-size: 2em;
-    margin: .67em 0
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 a {
-    background-color: transparent
+  background-color: transparent;
 }
 
 img {
-    border-style: none
+  border-style: none;
 }
 
-button,input,optgroup,select,textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
-button,input {
-    overflow: visible
+button,
+input {
+  overflow: visible;
 }
 
-button,select {
-    text-transform: none
+button,
+select {
+  text-transform: none;
 }
 
-[type=button],[type=reset],[type=submit],button {
-    -webkit-appearance: button
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
 }
 
 :root {
@@ -50,15 +59,15 @@ button,select {
   --bold-weight: 800;
   --medium-weight: 500;
   --bg-stars: url("../images/bg-stars.png");
-  --color-primary: #FF7D00;
+  --color-primary: #ff7d00;
   --section-padding-x: 1.5em;
   --section-padding-x-desktop: 5em;
-  --nav-link-color:  #FC7F58;
+  --nav-link-color: #fc7f58;
 }
 
 body {
   font-family: "Spartan", sans-serif;
-  color: #A1A0A1;
+  color: #a1a0a1;
   font-size: 18px;
   font-weight: var(--medium-weight);
 }
@@ -115,11 +124,12 @@ footer {
 }
 .btn-primary {
   color: #fff;
-  background-color: #2A2A2A;
+  background-color: #2a2a2a;
   box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   padding: 1.25em;
-  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+    transform 0.25s ease-in-out;
   text-decoration: none;
 }
 .bg-stars {
@@ -236,7 +246,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  section:not(.roadmap-section) {
+  section:not(.roadmap-section, .tokenomics-section) {
     padding-right: var(--section-padding-x-desktop);
     padding-left: var(--section-padding-x-desktop);
   }
@@ -247,9 +257,9 @@ footer {
 
   .tokenomics-section h2:before,
   .community-section h2:before {
-    content: '';
+    content: "";
     height: 5px;
-    background-color: #A8A8A8;
+    background-color: #a8a8a8;
     display: block;
     border-radius: 5px;
     margin-bottom: 8px;
@@ -328,7 +338,7 @@ footer {
     font-size: 0.7em;
   }
   .page-header nav {
-    padding-top:  0;
+    padding-top: 0;
     padding-bottom: 0;
   }
   .page-header nav a {
@@ -337,7 +347,7 @@ footer {
     font-size: 0.8em;
   }
   .page-header nav a:after {
-    content: '';
+    content: "";
     width: 0;
     height: 2px;
     display: block;
@@ -346,7 +356,7 @@ footer {
     transition: background-color 0.2s ease-in-out, width 0.25s ease-in-out;
   }
   .page-header nav a:last-of-type {
-    padding-right: var(--section-padding-x-desktop)
+    padding-right: var(--section-padding-x-desktop);
   }
   .page-header nav button,
   .hamburger-btn {
