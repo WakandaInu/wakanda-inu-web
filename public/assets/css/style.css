@@ -271,6 +271,7 @@ footer {
   }
   .hero .logo {
     order: 2;
+    width: 70%;
   }
   .hero .subsection *:not(.paper-link) {
     text-align: left;
