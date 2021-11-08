@@ -20,6 +20,15 @@ h1 {
 a {
   background-color: transparent;
 }
+a.external::after {
+  display: inline-block;
+  background: transparent url(../images/external.svg) 0 0 no-repeat;
+  background-size: 16px;
+  content: "";
+  height: 16px;
+  margin-left: 3px;
+  width: 16px;
+}
 
 img {
   border-style: none;
