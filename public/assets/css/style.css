@@ -75,13 +75,14 @@ button {
   --color-primary-light: #fede7e;
   --section-padding-x: 1.5em;
   --section-padding-x-desktop: 5em;
+  --section-padding-x-extralarge: 7em;
   --nav-link-color: #fc7f58;
 }
 
 body {
   font-family: "Givonic", sans-serif;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: var(--medium-weight);
 }
 
@@ -112,7 +113,7 @@ h3 {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0.05em;
 }
 
@@ -124,7 +125,8 @@ footer {
   background-color: var(--dark-gray);
   padding: 1.5em;
   color: #fff;
-  text-align: center;
+  text-align: left;
+  padding-left: var(--section-padding-x);
 }
 
 /* Utilities */
@@ -167,7 +169,7 @@ footer {
 }
 .header-border-bottom:after {
   content: "";
-  width: 65%;
+  max-width: 65%;
   height: 2px;
   display: block;
   border-radius: 120%;
@@ -205,9 +207,13 @@ footer {
 }
 .hero {
   background-color: #000;
-  background-image: url(../images/hero-bg.png);
-  background-position: 75% 18px;
+  background-image: url(../images/5550758-copy.jpg);
+  background-position: 53% 16px;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero .community-subsection {
+  display: none;
 }
 .hero h1 {
   line-height: 50px;
@@ -246,8 +252,17 @@ footer {
   max-width: 70%;
 }
 
+.waitlist-section {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 400px;
+}
 .waitlist-section h1 {
+  margin-bottom: 0;
   font-size: 2.5em;
+}
+.waitlist-section p {
+  margin: 0 auto;
 }
 
 .tokenomics-section h2,
@@ -257,9 +272,9 @@ footer {
 }
 .community-link-subsection {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 .community-link {
   display: flex;
@@ -288,6 +303,16 @@ footer {
 .community-section {
   background-color: var(--dark-gray);
   min-height: 200px;
+  position: relative;
+}
+.community-section p {
+  margin-right: auto;
+}
+.community-section-content {
+  width: 100%;
+}
+.community-section .partnership-subsection {
+  margin-right: auto;
 }
 .community-section .partnership-subsection a {
   display: flex;
@@ -303,10 +328,19 @@ footer {
 .community-section .partnership-subsection span {
   margin-left: 0.75em;
 }
+.community-section-heading h1 {
+  text-align: left !important;
+  max-width: 70%;
+}
+.community-section-heading h1:after {
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
 .certification-image-container img {
-  width: 70%;
+  width: 44%;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto 0 0;
   display: block;
 }
 /* /general */
@@ -318,14 +352,27 @@ footer {
   }
 }
 
+@media (min-width: 600px) {
+  .waitlist-section p {
+    max-width: 75%;
+  }
+}
+
 @media (min-width: 768px) {
   section:not(.roadmap-section, .tokenomics-section) {
     padding-right: var(--section-padding-x-desktop);
     padding-left: var(--section-padding-x-desktop);
   }
+  footer {
+    padding-left: var(--section-padding-x-desktop);
+  }
 
   .bg-stars {
     background-attachment: fixed;
+  }
+
+  .waitlist-section p {
+    max-width: 65%;
   }
 
   .tokenomics-section h2:before,
@@ -341,6 +388,7 @@ footer {
   .hero {
     flex-direction: row;
     min-height: 600px;
+    background-attachment: fixed;
   }
   .hero .logo {
     order: 2;
@@ -355,8 +403,6 @@ footer {
   }
   .community-link {
     padding: 0.75em;
-    border: 1px solid #414141;
-    width: 125px !important;
     border-radius: 8px;
     filter: grayscale(0);
   }
@@ -378,16 +424,34 @@ footer {
   .community-section-heading h2 {
     width: 6em;
   }
-  .community-section-content p {
-    width: 75%;
+  .community-section p {
+    max-width: 75%;
   }
   .community-subsection {
     display: block !important;
     margin-top: 2em;
   }
+  .community-section-heading h1 {
+    max-width: 50%;
+  }
+  .certification-image-container {
+    position: absolute;
+    bottom: 17%;
+    right: 0;
+  }
+  .certification-image-container img {
+    width: 51%;
+  }
 }
 
 @media (min-width: 992px) {
+  main {
+    padding-top: 3em;
+  }
+  footer {
+    padding-left: 0;
+    text-align: center;
+  }
   .page-header {
     padding: 0;
   }
@@ -435,5 +499,27 @@ footer {
   .page-header nav button,
   .hamburger-btn {
     display: none;
+  }
+
+  .waitlist-section p {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  section:not(.roadmap-section, .tokenomics-section) {
+    padding-right: calc(var(--section-padding-x-desktop) + 6em);
+    padding-left: calc(var(--section-padding-x-desktop) + 6em);
+  }
+
+  .waitlist-section p {
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  section:not(.roadmap-section, .tokenomics-section) {
+    padding-right: calc(var(--section-padding-x-desktop) + 6em);
+    padding-left: calc(var(--section-padding-x-desktop) + 6em);
   }
 }

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -12,7 +13,7 @@
     <title>Wakanda Inu - A Decentralized Meme Token</title>
     <style type="text/css">
       .tokenomics-section {
-        background-color: var(--dark-gray);
+        background-color: #000;
         padding-left: 0.1em;
         padding-right: 0.1em;
       }
@@ -40,8 +41,11 @@
         width: 100%;
       }
 
-      .exchange-list ol {
+      .exchange-list {
         display: none;
+      }
+      .exchange-list-section {
+        width: 100%;
       }
       .exchange-logo-section img {
         width: 85%;
@@ -61,15 +65,22 @@
         padding-top: 0;
         padding-bottom: 0;
       }
+      .news-section {
+        min-height: 600px;
+      }
+      .news-section h1 {
+        margin: 0;
+      }
 
       .contract-address {
         background-color: rgba(238, 140, 31, 0.1);
         box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.15);
         border-radius: 12px;
-        padding: 10%;
+        padding: 2em 1em;
         display: flex;
         flex-direction: column;
-        width: 75%;
+        width: 100%;
+        border: 1px solid var(--color-primary)
       }
       .contract-address textarea {
         overflow-wrap: anywhere;
@@ -80,6 +91,7 @@
         height: 4em;
         resize: none;
         letter-spacing: 0.06em;
+        font-weight: bold;
       }
       .contract-address textarea:focus-visible {
         outline: none;
@@ -96,6 +108,9 @@
         margin-right: 0.75em;
       }
 
+      .chart-section h1 {
+        margin-bottom: 1em;
+      }
       .chart-and-info {
         display: flex;
         width: 100%;
@@ -107,9 +122,9 @@
         overflow-wrap: break-word;
         display: flex;
         flex-direction: column;
-        font-size: 10.5px;
-        flex: 0 0 9em;
-        max-width: 9em;
+        font-size: 0.68em;
+        flex: 0 0 8em;
+        max-width: 8em;
         margin-bottom: 5%;
         display: flex;
         align-items: center;
@@ -123,12 +138,16 @@
       .roadmap-section {
         padding-right: 0;
         padding-left: 0;
+        background-image: url(assets/images/5550761-copy.jpg);
+        background-position-x: 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       .roadmap-section h1 {
         margin-bottom: 1.25em;
       }
       .roadmap-card {
-        background-color: rgba(96, 96, 96, 0.35);
+        background-color: rgba(58, 58, 58, 0.5);
         border-radius: 20px;
         box-shadow: 6px 7px 4px 3px rgba(0, 0, 0, 0.25);
         padding: 0;
@@ -169,99 +188,35 @@
       .roadmap-card-section {
         max-width: 90%;
       }
-      .hero .community-subsection {
-        display: none;
-      }
-      .waitlist-section {
-        padding-top: 0;
-        padding-bottom: 0;
-        min-height: 400px;
-      }
-      .waitlist-section h1 {
-        margin-bottom: 0;
-      }
-      .waitlist-section p {
-        margin: 0 auto;
-      }
 
-      @media (min-width: 500px) {
+      @media (min-width: 400px) {
         .chart-and-info a {
-          flex-basis: 8em;
-          max-width: 8em;
+          flex-basis: 22%;
+          max-width: 22%;
+          font-size: 0.8em;
+          padding-left: 0;
+          padding-right: 0;
         }
       }
 
       @media (min-width: 600px) {
-        .waitlist-section p {
-          max-width: 75%;
-        }
         .exchange-logo-section img {
           width: 40%;
-        }
-        .contract-address {
-          width: 65%;
         }
         .news-section img {
           width: 75%;
         }
-        .chart-and-info a {
-          font-size: 12.5px;
-        }
-      }
-      @media (min-width: 700px) {
-        .chart-and-info a {
-          flex-basis: 9em;
-          max-width: 9em;
-        }
       }
       @media (min-width: 768px) {
-        .roadmap-card-section {
-          max-width: 80%;
+        .roadmap-section {
+          background-position-x: 60%;
         }
-        .tokenomics-section .mobile {
-          display: none;
-        }
-        .tokenomics-section .desktop {
-          display: block;
-        }
-        .waitlist-section p {
-          max-width: 65%;
-        }
-      }
-      @media (min-width: 992px) {
         .roadmap-card-section {
           position: relative;
           max-width: 100%;
         }
-        .roadmap-card-section,
-        .roadmap-card {
-          margin-right: 0 !important;
-          margin-left: 0 !important;
-        }
-        .roadmap-card-section:after {
-          content: "";
-          position: absolute;
-          width: 6px;
-          background-color: white;
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          margin-left: -3px;
-        }
-        .roadmap-card:after {
-          content: "";
-          position: absolute;
-          width: 25px;
-          height: 25px;
-          right: 420px;
-          background-color: #faaa33;
-          border: 8px solid #000;
-          top: -2px;
-          border-radius: 50%;
-          z-index: 1;
-        }
-        .roadmap-card:nth-child(even):after {
-          right: -110px;
+        .exchange-list {
+          flex: 0 0 20%;
         }
         .roadmap-card {
           text-align: left;
@@ -270,15 +225,61 @@
           padding-top: 1em;
         }
         .roadmap-card:nth-child(even) {
-          left: 10px;
+          left: 115px;
         }
-        .waitlist-section p {
-          max-width: 50%;
+        .tokenomics-section .mobile {
+          display: none;
+        }
+        .tokenomics-section .desktop {
+          display: block;
+        }
+      }
+      @media (min-width: 992px) {
+        .exchange-list-section {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .exchange-list {
+          flex: 0 0 20%;
+        }
+        .exchange-logo-section {
+          flex: 0 0 45%;
+        }
+        .exchange-logo-section img {
+          width: 100%;
+        }
+        .exchange-list {
+          display: block;
+          font-size: 1.25em;
+        }
+        .exchange-list li:not(:last-of-type) {
+          margin-bottom: 0.5em;
+        }
+        .contract-address {
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .contract-address textarea {
+          flex: 1 1 70%;
+          height: 1em;
+          padding-top: 2em;
+          padding-bottom: 2em;
+          overflow: hidden;
+        }
+        .contract-address a {
+          flex: 1 1 25%;
+          padding: 1em;
+          order: -1;
+        }
+        .roadmap-section {
+          background-position-x: 80%;
         }
       }
       @media (min-width: 1200px) {
-        .waitlist-section p {
-          max-width: 45%;
+        .news-section img {
+          width: 60%;
         }
       }
     </style>
@@ -417,11 +418,11 @@
       </section>
 
       <section class="exchanges">
+        <h1 class="font-weight-normal text-center text-primary-light header-border-bottom">
+          13 <span class="font-beyno">exhanges and counting</span>
+        </h1>
         <div class="exchange-list-section">
           <div class="exchange-list">
-            <h1 class="font-weight-normal text-center text-primary-light header-border-bottom">
-              13 <span class="font-beyno">exhanges and counting</span>
-            </h1>
             <ol>
               <li>Pancakeswap</li>
               <li>BKEX</li>
@@ -484,7 +485,7 @@
         <img src="assets/images/news.png" alt="news-logos" srcset="">
       </section>
 
-      <section id="roadmap" class="roadmap-section bg-stars">
+      <section id="roadmap" class="roadmap-section">
         <h1 class="font-beyno font-weight-normal text-center text-primary-light header-border-bottom">
           WAKANDA FOREVER
         </h1>
@@ -533,7 +534,7 @@
             <img src="assets/images/certik-audit.png" />
           </div>
         </div>
-        <p class="text-center">
+        <p class="text-left">
           <span class="font-beyno text-primary-light">WAKANDA INU</span> as a community grows
           stronger every day. Please follow our social platforms to get the
           most up-to-date, accurate WAKANDA INU information.
@@ -586,6 +587,22 @@
               height="35"
             />
             <span>Facebook</span>
+          </a>
+          <a
+            href="https://wakandainu.medium.com"
+            target="_blank"
+            rel="noopener"
+            rel="noreferrer"
+            class="community-link"
+          >
+            <img
+              src="assets/images/logos-medium.svg"
+              alt="Medium logo"
+              loading="lazy"
+              width="35"
+              height="35"
+            />
+            <span>Medium</span>
           </a>
         </div>
         <div class="partnership-subsection">
