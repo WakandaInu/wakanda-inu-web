@@ -146,10 +146,12 @@ template {
 .text-left {
   text-align: left !important;
 }
-.btn-primary:hover {
-  background-color: var(--btn-primary-bg-hover);
+.btn:hover {
   cursor: pointer;
   transform: translate(0px, -5px);
+}
+.btn-primary:hover {
+  background-color: var(--btn-primary-bg-hover);
   color: var(--color-primary-light);
   border: 1px solid var(--color-primary-light);
 }

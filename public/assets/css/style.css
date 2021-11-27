@@ -145,15 +145,24 @@ footer {
 .text-primary-light {
   color: var(--color-primary-light);
 }
-.btn-primary {
-  color: var(--btn-primary-fg);
-  background-color: var(--btn-primary-bg);
-  box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.15);
+.btn {
   border-radius: 12px;
   padding: 1.25em;
   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
     transform 0.25s ease-in-out;
   text-decoration: none;
+  outline: none;
+  border: none;
+}
+.btn-primary {
+  color: var(--btn-primary-fg);
+  background-color: var(--btn-primary-bg);
+  box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.15);
+}
+.btn-secondary {
+  color: var(--color-primary-light);
+  background-color: var(--btn-primary-bg-hover);
+  border: 1px solid var(--color-primary-light);
 }
 .bg-stars {
   background: var(--bg-stars);
@@ -371,6 +380,10 @@ footer {
     background-attachment: fixed;
   }
 
+  .hero {
+    background-attachment: fixed;
+  }
+
   .waitlist-section p {
     max-width: 65%;
   }
@@ -383,23 +396,6 @@ footer {
     display: block;
     border-radius: 5px;
     margin-bottom: 8px;
-  }
-
-  .hero {
-    flex-direction: row;
-    min-height: 600px;
-    background-attachment: fixed;
-  }
-  .hero .logo {
-    order: 2;
-    width: 70%;
-  }
-  .hero .subsection *:not(.paper-link) {
-    text-align: left;
-    max-width: 95%;
-  }
-  .hero .subsection .paper-link {
-    margin: 0 auto 0 0;
   }
   .community-link {
     padding: 0.75em;

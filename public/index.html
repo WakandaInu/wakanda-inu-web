@@ -208,6 +208,22 @@
         }
       }
       @media (min-width: 768px) {
+        .hero {
+          flex-direction: row;
+          min-height: 600px;
+        }
+        .hero .logo {
+          order: 2;
+          width: 70%;
+        }
+        .hero .subsection *:not(.paper-link) {
+          text-align: left;
+          max-width: 95%;
+        }
+        .hero .subsection .paper-link {
+          margin: 0 auto 0 0;
+        }
+
         .roadmap-section {
           background-position-x: 60%;
         }
@@ -247,7 +263,7 @@
           flex: 0 0 45%;
         }
         .exchange-logo-section img {
-          width: 100%;
+          width: 80%;
         }
         .exchange-list {
           display: block;
@@ -368,7 +384,7 @@
           <a
             href="assets/PANTHERS-WORDS.pdf"
             id="panthersword"
-            class="btn-primary paper-link font-beyno"
+            class="btn btn-primary paper-link font-beyno"
             target="_blank"
             rel="noopener"
             rel="noreferrer"
@@ -451,7 +467,7 @@
         </div>
         <div class="contract-address">
           <textarea class="text-center" autocorrect="off" spellcheck="false" readonly>0x5344c20fd242545f31723689662ac12b9556fc3d</textarea>
-          <a href="#" class="btn-primary font-beyno text-center">
+          <a href="#" class="btn btn-primary font-beyno text-center">
             <span>copy contact address</span>
             <img src="assets/images/akar-icons_copy.svg" />
           </a>
@@ -463,18 +479,18 @@
           view chart and info
         </h1>
         <div class="chart-and-info text-uppercase font-beyno">
-            <a href="#" target="_blank" class="btn-primary">coingecko</a>
-            <a href="#" target="_blank" class="btn-primary">dextools</a>
-            <a href="#" target="_blank" class="btn-primary">icoholder</a>
-            <a href="#" target="_blank" class="btn-primary">coinmarketcap</a>
-            <a href="#" target="_blank" class="btn-primary">poocoin</a>
-            <a href="#" target="_blank" class="btn-primary">digitalcoin</a>
-            <a href="#" target="_blank" class="btn-primary">certik audit</a>
-            <a href="#" target="_blank" class="btn-primary">blockfolio</a>
-            <a href="#" target="_blank" class="btn-primary">coinstats</a>
-            <a href="#" target="_blank" class="btn-primary">burn address</a>
-            <a href="#" target="_blank" class="btn-primary">coinbase</a>
-            <a href="#" target="_blank" class="btn-primary">bscan</a>
+            <a href="#" target="_blank" class="btn btn-primary">coingecko</a>
+            <a href="#" target="_blank" class="btn btn-primary">dextools</a>
+            <a href="#" target="_blank" class="btn btn-primary">icoholder</a>
+            <a href="#" target="_blank" class="btn btn-primary">coinmarketcap</a>
+            <a href="#" target="_blank" class="btn btn-primary">poocoin</a>
+            <a href="#" target="_blank" class="btn btn-primary">digitalcoin</a>
+            <a href="#" target="_blank" class="btn btn-primary">certik audit</a>
+            <a href="#" target="_blank" class="btn btn-primary">blockfolio</a>
+            <a href="#" target="_blank" class="btn btn-primary">coinstats</a>
+            <a href="#" target="_blank" class="btn btn-primary">burn address</a>
+            <a href="#" target="_blank" class="btn btn-primary">coinbase</a>
+            <a href="#" target="_blank" class="btn btn-primary">bscan</a>
         </div>
       </section>
 
