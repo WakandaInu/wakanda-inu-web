@@ -12,6 +12,26 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <title>Wakanda Inu - A Decentralized Meme Token</title>
     <style type="text/css">
+      .hero .subsection div:last-of-type {
+        display: flex;
+        flex-direction: column;
+      }
+      .hero .subsection div:last-of-type .paper-link:first-of-type {
+        margin-bottom: 1.75em;
+      }
+      @media (min-width: 768px) {
+        .hero .subsection div:last-of-type {
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+        .hero .subsection div:last-of-type .paper-link {
+          flex: 0 0 35%;
+        }
+        .hero .subsection div:last-of-type .paper-link:first-of-type {
+          margin-bottom: 0;
+          margin-right: 1em;
+        }
+      }
       .tokenomics-section {
         background-color: #000;
         padding-left: 0.1em;
@@ -96,16 +116,34 @@
       .contract-address textarea:focus-visible {
         outline: none;
       }
-      .contract-address a {
+      .contract-address .btn {
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: small;
         padding-left: 0.6em;
         padding-right: 0.6em;
+        position: relative;
       }
-      .contract-address a span {
+      .contract-address .btn .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        top: -50px;
+        left: 25%;
+      }
+      .contract-address .btn.active .tooltiptext {
+        visibility: visible;
+      }
+      .contract-address .btn span:not(.tooltiptext) {
         margin-right: 0.75em;
+        position: relative;
       }
 
       .chart-section h1 {
@@ -220,8 +258,9 @@
           text-align: left;
           max-width: 95%;
         }
-        .hero .subsection .paper-link {
-          margin: 0 auto 0 0;
+
+        .contract-address .btn .tooltiptext {
+          left: 25%;
         }
 
         .roadmap-section {
@@ -381,7 +420,8 @@
             good across the globe. Welcome to
             <span class="font-beyno text-primary-light">WAKANDA</span>
           </p>
-          <a
+          <div class="">
+            <a
             href="assets/PANTHERS-WORDS.pdf"
             id="panthersword"
             class="btn btn-primary paper-link font-beyno"
@@ -391,6 +431,8 @@
           >
             Panthers Words
           </a>
+          <a href="#" class="btn btn-secondary paper-link font-beyno">buy wkd</a>
+          </div>
         </div>
       </section>
 
@@ -403,6 +445,9 @@
           represents the best aspects of what it means to be alive and part of
           a community with a single purpose.
         </p>
+        <a href="marketplace.html" class="btn btn-secondary font-beyno">
+          marketplace
+        </a>
       </section>
 
       <section id="tokenomics" class="tokenomics-section">
@@ -468,7 +513,10 @@
         <div class="contract-address">
           <textarea class="text-center" autocorrect="off" spellcheck="false" readonly>0x5344c20fd242545f31723689662ac12b9556fc3d</textarea>
           <a href="#" class="btn btn-primary font-beyno text-center">
-            <span>copy contact address</span>
+            <span>
+              <span class="tooltiptext">Copied!</span>
+              <span>copy contact address</span>
+            </span>
             <img src="assets/images/akar-icons_copy.svg" />
           </a>
         </div>
@@ -669,6 +717,12 @@
             event.preventDefault();
             this.previousElementSibling.select();
             document.execCommand('copy');
+            this.classList.add('active');
+            this.focus();
+            var that = this;
+            setTimeout(function () {
+              that.classList.remove('active');
+            }, 600);
           });
       });
     </script>

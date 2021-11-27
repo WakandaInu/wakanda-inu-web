@@ -153,6 +153,13 @@ footer {
   text-decoration: none;
   outline: none;
   border: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn.font-beyno {
+  letter-spacing: 0.1em;
 }
 .btn-primary {
   color: var(--btn-primary-fg);
@@ -256,15 +263,11 @@ footer {
   margin-top: 0;
   margin-bottom: 0;
 }
-.hero .subsection .paper-link {
-  margin: 0 auto;
-  max-width: 70%;
-}
 
 .waitlist-section {
   padding-top: 0;
   padding-bottom: 0;
-  min-height: 400px;
+  min-height: 500px;
 }
 .waitlist-section h1 {
   margin-bottom: 0;
@@ -272,6 +275,7 @@ footer {
 }
 .waitlist-section p {
   margin: 0 auto;
+  margin-bottom: 1em;
 }
 
 .tokenomics-section h2,
