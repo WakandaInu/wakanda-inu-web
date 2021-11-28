@@ -1,19 +1,16 @@
+const fetch = require("node-fetch");
 const { getFirestore } = require("../firestore");
 const firestore = getFirestore();
 
 async function verifyCaptcha(token) {
   try {
     const response = await fetch(
-      "https://www.google.com/recaptcha/api/siteverify",
+      `https://www.google.com/recaptcha/api/siteverify?secret=6Le5WmQdAAAAAFbd83pwuxlMim6jT0-V0I6duFEO&response=${token}`,
       {
         method: "POST",
-        body: JSON.stingify({
-          secret: "6Le5WmQdAAAAAFbd83pwuxlMim6jT0-V0I6duFEO",
-          response: token,
-        }),
       }
     );
-    const json = response.json();
+    const json = await response.json();
 
     return Promise.resolve(json.success);
   } catch {
@@ -88,6 +85,7 @@ exports.handler = async function join(event, context, callback) {
       body: JSON.stringify({ message: "OK" }),
     };
   } catch (error) {
+    console.log({ error });
     return {
       statusCode: 500,
       body: JSON.stringify({

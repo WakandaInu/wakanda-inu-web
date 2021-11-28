@@ -19,6 +19,7 @@
   "homepage": "https://github.com/WakandaInu/wakanda-inu-web#readme",
   "dependencies": {
     "@firebase/app-compat": "^0.1.10",
-    "firebase-admin": "^10.0.0"
+    "firebase-admin": "^10.0.0",
+    "node-fetch": "^2.6.6"
   }
 }
