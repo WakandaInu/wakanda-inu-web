@@ -12,7 +12,11 @@ async function verifyCaptcha(token) {
     );
     const json = await response.json();
 
-    return Promise.resolve(json.success);
+    if (json.success) {
+      return Promise.resolve(json.score > 0.5);
+    }
+
+    return Promise.resolve(false);
   } catch {
     return Promise.resolve(false);
   }
