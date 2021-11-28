@@ -242,6 +242,9 @@ input::selection {
   .page-header nav a:hover {
     color: var(--nav-link-color);
   }
+  .page-header nav a.current {
+    color: var(--nav-link-color);
+  }
   .page-header nav a:hover:after {
     width: 70%;
     background-color: var(--nav-link-color);
