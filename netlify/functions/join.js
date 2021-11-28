@@ -2,26 +2,6 @@ const fetch = require("node-fetch");
 const { getFirestore } = require("../firestore");
 const firestore = getFirestore();
 
-async function verifyCaptcha(token) {
-  try {
-    const response = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=6Le5WmQdAAAAAFbd83pwuxlMim6jT0-V0I6duFEO&response=${token}`,
-      {
-        method: "POST",
-      }
-    );
-    const json = await response.json();
-
-    if (json.success) {
-      return Promise.resolve(json.score > 0.5);
-    }
-
-    return Promise.resolve(false);
-  } catch {
-    return Promise.resolve(false);
-  }
-}
-
 exports.handler = async function join(event, context, callback) {
   const { httpMethod, body } = event;
 
@@ -43,9 +23,10 @@ exports.handler = async function join(event, context, callback) {
       };
     }
 
-    const hasValidCaptcha = await verifyCaptcha(
-      parsedBody["g-recaptcha-response"]
-    );
+    const hasValidCaptcha = await verifyCaptcha({
+      response: parsedBody["g-recaptcha-response"],
+      remoteip: event.headers["client-ip"],
+    });
 
     if (!hasValidCaptcha) {
       return {
@@ -98,3 +79,18 @@ exports.handler = async function join(event, context, callback) {
     };
   }
 };
+
+async function verifyCaptcha({ response, remoteip }) {
+  try {
+    const res = await fetch(
+      `https://www.google.com/recaptcha/api/siteverify?secret=6Le5WmQdAAAAAFbd83pwuxlMim6jT0-V0I6duFEO&response=${response}&remoteip=${remoteip}`,
+      {
+        method: "POST",
+      }
+    );
+    const json = await res.json();
+    return Promise.resolve(json.success && json.score > 0.5);
+  } catch {
+    return Promise.resolve(false);
+  }
+}
