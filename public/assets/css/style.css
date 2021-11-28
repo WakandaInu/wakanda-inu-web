@@ -483,6 +483,11 @@ footer {
     padding: 1.75em 1em;
     transition: color 0.2s ease-in-out;
     font-size: 0.8em;
+    padding-bottom: 0.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .page-header nav a:after {
     content: "";
