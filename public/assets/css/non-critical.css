@@ -135,9 +135,16 @@ template {
   font-display: swap;
 }
 
-::selection {
+::selection:not(input) {
   background-color: var(--btn-primary-bg-hover);
   color: #000;
+}
+input {
+  font-weight: bold;
+}
+input::selection {
+  background-color: #000;
+  color: var(--color-primary);
 }
 
 .text-right {
@@ -150,10 +157,14 @@ template {
   cursor: pointer;
   transform: translate(0px, -5px);
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary[disabled] {
   background-color: var(--btn-primary-bg-hover);
   color: var(--color-primary-light);
   border: 1px solid var(--color-primary-light);
+}
+.btn-primary[disabled] {
+  transition: none;
 }
 .btn-primary:active {
   background-color: var(--btn-primary-bg-hover);
