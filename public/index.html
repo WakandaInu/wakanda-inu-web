@@ -140,7 +140,7 @@
         transform: none;
         color: var(--btn-primary-fg);
         background-color: var(--btn-primary-bg);
-        border-color: transparent !important;
+        border-color: var(--color-primary-light) !important;
       }
       .contract-address .tabs .btn:not(.current) {
         background-color: var(--btn-primary-bg-hover);
@@ -173,13 +173,14 @@
         visibility: hidden;
         width: 120px;
         background-color: black;
-        color: #fff;
+        color: var(--color-primary-light);
         text-align: center;
         padding: 5px 0;
         border-radius: 6px;
+        border: 1px solid var(--color-primary-light);
         position: absolute;
         z-index: 1;
-        top: -50px;
+        top: -55px;
         left: 25%;
       }
       .contract-address .btn.active .tooltiptext {
