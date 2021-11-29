@@ -1061,43 +1061,41 @@
     <footer>&copy; <span class="font-beyno">Copyright</span> 2021</footer>
     <!-- /footer -->
 
-    <script src="assets/js/main.js"></script>
     <script>
-      window.addEventListener("DOMContentLoaded", function () {
-        document
-          .querySelector(".contract-address > a")
-          .addEventListener("click", function (event) {
-            event.preventDefault();
-            this.previousElementSibling.select();
-            document.execCommand("copy");
-            this.classList.add("active");
-            this.focus();
-            var that = this;
-            setTimeout(function () {
-              that.classList.remove("active");
-            }, 600);
-          });
+      document
+        .querySelector(".contract-address > a")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          this.previousElementSibling.select();
+          document.execCommand("copy");
+          this.classList.add("active");
+          this.focus();
+          var that = this;
+          setTimeout(function () {
+            that.classList.remove("active");
+          }, 600);
+        });
 
-        var tabBtns = document.querySelectorAll('.tabs .btn');
-        var contractAddressTextArea = document.querySelector('.contract-address textarea');
-        var addresses = {
-          bsc: '0x5344c20fd242545f31723689662ac12b9556fc3d',
-          eth: '0x5444c30210d8a0a156178cfb8048b4137c0d40d1'
-        };
+      var tabBtns = document.querySelectorAll('.tabs .btn');
+      var contractAddressTextArea = document.querySelector('.contract-address textarea');
+      var addresses = {
+        bsc: '0x5344c20fd242545f31723689662ac12b9556fc3d',
+        eth: '0x5444c30210d8a0a156178cfb8048b4137c0d40d1'
+      };
 
-        tabBtns.forEach(function (btn) {
-          btn.addEventListener('click', function (event) {
-            event.preventDefault();
+      tabBtns.forEach(function (btn) {
+        btn.addEventListener('click', function (event) {
+          event.preventDefault();
 
-            var that = this;
-            tabBtns.forEach(function (b) {
-              b.classList.remove('current');
-              that.classList.add('current');
-              contractAddressTextArea.textContent = addresses[that.dataset.tabKey];
-            });
+          var that = this;
+          tabBtns.forEach(function (b) {
+            b.classList.remove('current');
+            that.classList.add('current');
+            contractAddressTextArea.textContent = addresses[that.dataset.tabKey];
           });
         });
       });
     </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
