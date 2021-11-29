@@ -278,8 +278,8 @@
 
       @media (min-width: 400px) {
         .chart-and-info a {
-          flex-basis: 22%;
-          max-width: 22%;
+          flex-basis: 30%;
+          max-width: 30%;
           font-size: 0.8em;
           padding-left: 0;
           padding-right: 0;
@@ -287,6 +287,11 @@
       }
 
       @media (min-width: 600px) {
+        .chart-and-info a {
+          flex-basis: 22%;
+          max-width: 22%;
+          font-size: 0.7em;
+        }
         .exchange-logo-section img {
           width: 40%;
         }
@@ -414,6 +419,7 @@
   </head>
 
   <body>
+    <!-- page-header -->
     <header class="page-header">
       <a href="index.html" class="home-link">
         <img
@@ -466,8 +472,10 @@
         <a href="#roadmap">Roadmap</a>
       </nav>
     </header>
+    <!-- /page-header -->
 
     <main>
+      <!-- hero -->
       <section class="hero text-center">
         <img
           class="logo"
@@ -517,7 +525,9 @@
           </div>
         </div>
       </section>
+      <!-- /hero -->
 
+      <!-- waitlist-section -->
       <section class="waitlist-section text-center">
         <h1 class="font-beyno font-weight-normal header-border-bottom">
           The World needs<br /><span class="text-primary">$WKD</span>
@@ -530,11 +540,13 @@
           represents the best aspects of what it means to be alive and part of a
           community with a single purpose.
         </p>
-        <a href="assets/Wakanda_Marketplace._v0.0.1.pdf" class="btn btn-secondary font-beyno">
+        <a href="nft-marketplace.html" class="btn btn-secondary font-beyno">
           nft marketplace
         </a>
       </section>
+      <!-- /waitlist-section -->
 
+      <!-- tokenomics -->
       <section id="tokenomics" class="tokenomics-section">
         <div class="mobile">
           <img
@@ -622,7 +634,9 @@
           </a>
         </div>
       </section>
+      <!-- /tokenomics -->
 
+      <!-- chart-info -->
       <section class="chart-section">
         <h1
           class="
@@ -733,7 +747,9 @@
           >
         </div>
       </section>
+      <!-- /chart-info -->
 
+      <!-- news-section -->
       <section class="news-section">
         <h1
           class="
@@ -810,7 +826,9 @@
           </a>
         </div>
       </section>
+      <!-- /news-section -->
 
+      <!-- roadmap-section -->
       <section id="roadmap" class="roadmap-section">
         <h1
           class="
@@ -859,7 +877,9 @@
           </div>
         </div>
       </section>
+      <!-- /roadmap-section -->
 
+      <!-- community-section -->
       <section id="community" class="community-section">
         <div class="community-section-content">
           <div class="community-section-heading">
@@ -967,35 +987,16 @@
           </a>
         </div>
       </section>
+      <!-- /community-section -->
     </main>
 
+    <!-- footer -->
     <footer>&copy; <span class="font-beyno">Copyright</span> 2021</footer>
+    <!-- /footer -->
 
+    <script src="assets/js/main.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded", function () {
-        var nav = document.querySelector(".page-header nav");
-
-        document
-          .querySelector(".page-header .hamburger-btn")
-          .addEventListener("click", function () {
-            nav.classList.add("show");
-            document.body.style.setProperty("overflow", "hidden");
-          });
-
-        document.querySelectorAll(".page-header nav a").forEach(function (elm) {
-          elm.addEventListener("click", function (event) {
-            nav.classList.remove("show");
-            document.body.style.removeProperty("overflow");
-          });
-        });
-
-        document
-          .querySelector(".page-header nav button")
-          .addEventListener("click", function () {
-            nav.classList.remove("show");
-            document.body.style.removeProperty("overflow");
-          });
-
         document
           .querySelector(".contract-address > a")
           .addEventListener("click", function (event) {
