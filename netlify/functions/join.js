@@ -38,7 +38,7 @@ exports.handler = async function join(event, context, callback) {
     if (!email) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ message: "Email required" }),
+        body: JSON.stringify({ message: "Please enter a valid email" }),
       };
     }
 
@@ -49,7 +49,7 @@ exports.handler = async function join(event, context, callback) {
     ) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ message: "Invalid email" }),
+        body: JSON.stringify({ message: "Please enter a valid email" }),
       };
     }
 
