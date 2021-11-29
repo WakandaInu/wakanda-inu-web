@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -11,8 +12,30 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <title>Wakanda Inu - A Decentralized Meme Token</title>
     <style type="text/css">
+      .hero .subsection div:last-of-type {
+        display: flex;
+        flex-direction: column;
+      }
+      .hero .subsection div:last-of-type .paper-link:first-of-type {
+        margin-bottom: 1.75em;
+      }
+
+      @media (min-width: 768px) {
+        .hero .subsection div:last-of-type {
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+        .hero .subsection div:last-of-type .paper-link {
+          flex: 0 0 35%;
+        }
+        .hero .subsection div:last-of-type .paper-link:first-of-type {
+          margin-bottom: 0;
+          margin-right: 1em;
+        }
+      }
+
       .tokenomics-section {
-        background-color: var(--dark-gray);
+        background-color: #000;
         padding-left: 0.1em;
         padding-right: 0.1em;
       }
@@ -21,7 +44,7 @@
       }
       .tokenomics-section .desktop img {
         margin: 0 auto;
-        width: 100%;
+        width: 70%;
         height: auto;
       }
       .tokenomics-section .mobile {
@@ -32,7 +55,7 @@
         display: block;
       }
       .tokenomics-section .mobile img {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
         height: auto;
       }
@@ -40,13 +63,171 @@
         width: 100%;
       }
 
+      .exchange-list {
+        display: none;
+      }
+      .exchange-list a:hover {
+        text-decoration: underline;
+      }
+      .exchange-list-section {
+        width: 100%;
+      }
+      .exchange-logo-section img {
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+      }
+      .exchange-disclaimer {
+        margin-bottom: 2em;
+        padding-top: 1.5em;
+      }
+      .exchange-disclaimer h3 {
+        margin-bottom: -0.25em;
+      }
+
+      .chart-section,
+      .news-section {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .news-section {
+        min-height: 700px;
+      }
+      .news-section h1 {
+        margin: 0;
+      }
+      .news-section div {
+        display: flex;
+        margin-top: 1em;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .news-section div a {
+        flex: 0 0 22%;
+        margin: 1em 0.25em;
+      }
+      .news-section div a img {
+        width: 100%;
+        height: auto;
+      }
+
+      .contract-address {
+        background-color: rgba(238, 140, 31, 0.1);
+        box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 2em 1em;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid var(--color-primary);
+        position: relative;
+      }
+      .contract-address .tabs {
+        position: absolute;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 30%;
+        top: -12.5%;
+      }
+      .contract-address .tabs .btn {
+        flex:  0 0 30%;
+      }
+      .contract-address .tabs .btn:hover {
+        transform: none;
+        color: var(--btn-primary-fg);
+        background-color: var(--btn-primary-bg);
+        border-color: transparent !important;
+      }
+      .contract-address .tabs .btn:not(.current) {
+        background-color: var(--btn-primary-bg-hover);
+        border: 1px solid var(--btn-primary-bg);
+      }
+      .contract-address textarea {
+        overflow-wrap: anywhere;
+        font-size: 1.2em;
+        color: var(--color-primary-light);
+        background-color: transparent;
+        border: none;
+        height: 4em;
+        resize: none;
+        letter-spacing: 0.06em;
+        font-weight: bold;
+      }
+      .contract-address textarea:focus-visible {
+        outline: none;
+      }
+      .contract-address .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: small;
+        padding-left: 0.6em;
+        padding-right: 0.6em;
+        position: relative;
+      }
+      .contract-address .btn .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        top: -50px;
+        left: 25%;
+      }
+      .contract-address .btn.active .tooltiptext {
+        visibility: visible;
+      }
+      .contract-address .btn span:not(.tooltiptext) {
+        margin-right: 0.75em;
+        position: relative;
+      }
+
+      .chart-section h1 {
+        margin-bottom: 1em;
+      }
+      .chart-and-info {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .chart-and-info .btn {
+        text-align: center;
+        overflow-wrap: break-word;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.68em;
+        flex: 0 0 8em;
+        max-width: 8em;
+        margin-bottom: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       .roadmap-section {
         padding-right: 0;
         padding-left: 0;
+        background-image: url(assets/images/5550761-copy.jpg);
+        background-position-x: 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      .roadmap-section h1 {
+        margin-bottom: 1.25em;
       }
       .roadmap-card {
-        background-color: rgba(96, 96, 96, 0.35);
-        border-radius: 25px;
+        background-color: rgba(58, 58, 58, 0.5);
+        border-radius: 20px;
         box-shadow: 6px 7px 4px 3px rgba(0, 0, 0, 0.25);
         padding: 0;
         padding-bottom: 1em;
@@ -67,77 +248,84 @@
       .roadmap-card ul {
         padding-right: 0.5em;
       }
+      .roadmap-card li {
+        letter-spacing: 0.1em;
+      }
+      .roadmap-card li.done:after {
+        content: "";
+        background-image: url(assets/images/bi_shield-fill-check.svg);
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        margin-left: 0.25em;
+        background-size: 13px;
+      }
       .roadmap-card:nth-child(even) h3 {
         text-align: right;
       }
       .roadmap-card-section {
         max-width: 90%;
       }
-      .hero .community-subsection {
-        display: none;
-      }
-      .waitlist-section {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-      .waitlist-section p {
-        margin: 0 auto;
+
+      @media (min-width: 450px) {
+        .chart-and-info .btn {
+          flex-basis: 30%;
+          max-width: 30%;
+          font-size: 0.8em;
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
 
       @media (min-width: 600px) {
-        .waitlist-section p {
-          max-width: 75%;
+        .contract-address .tabs .btn {
+          flex:  0 0 40%;
+        }
+        .chart-and-info .btn {
+          flex-basis: 22%;
+          max-width: 22%;
+          font-size: 0.7em;
+        }
+        .exchange-logo-section img {
+          width: 40%;
         }
       }
+
       @media (min-width: 768px) {
-        .roadmap-card-section {
-          max-width: 80%;
+        .hero {
+          flex-direction: row;
+          min-height: 600px;
         }
-        .tokenomics-section .mobile {
-          display: none;
+        .hero .logo {
+          order: 2;
+          width: 70%;
         }
-        .tokenomics-section .desktop {
-          display: block;
+        .hero .subsection *:not(.paper-link) {
+          text-align: left;
+          max-width: 95%;
         }
-        .waitlist-section p {
-          max-width: 65%;
+
+        .news-section div {
+          max-width: 85%;
         }
-      }
-      @media (min-width: 992px) {
+
+        .contract-address .btn .tooltiptext {
+          left: 25%;
+        }
+
+        .roadmap-section {
+          background-position-x: 60%;
+        }
         .roadmap-card-section {
           position: relative;
           max-width: 100%;
         }
-        .roadmap-card-section,
-        .roadmap-card {
-          margin-right: 0 !important;
-          margin-left: 0 !important;
+
+        .exchange-list {
+          flex: 0 0 20%;
         }
-        .roadmap-card-section:after {
-          content: "";
-          position: absolute;
-          width: 6px;
-          background-color: white;
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          margin-left: -3px;
-        }
-        .roadmap-card:after {
-          content: "";
-          position: absolute;
-          width: 25px;
-          height: 25px;
-          right: 420px;
-          background-color: #faaa33;
-          border: 8px solid #000;
-          top: -2px;
-          border-radius: 50%;
-          z-index: 1;
-        }
-        .roadmap-card:nth-child(even):after {
-          right: -110px;
-        }
+
         .roadmap-card {
           text-align: left;
           left: 54%;
@@ -145,15 +333,60 @@
           padding-top: 1em;
         }
         .roadmap-card:nth-child(even) {
-          left: 10px;
+          left: 115px;
         }
-        .waitlist-section p {
-          max-width: 50%;
+
+        .tokenomics-section .mobile {
+          display: none;
+        }
+        .tokenomics-section .desktop {
+          display: block;
         }
       }
-      @media (min-width: 1200px) {
-        .waitlist-section p {
-          max-width: 45%;
+
+      @media (min-width: 992px) {
+        .exchange-list-section {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .exchange-list {
+          flex: 0 0 20%;
+        }
+        .exchange-logo-section {
+          flex: 0 0 45%;
+        }
+        .exchange-logo-section img {
+          width: 80%;
+        }
+        .exchange-list {
+          display: block;
+          font-size: 1.25em;
+        }
+        .exchange-list li:not(:last-of-type) {
+          margin-bottom: 0.5em;
+        }
+
+        .contract-address {
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .contract-address textarea {
+          flex: 1 1 70%;
+          height: 1em;
+          padding-top: 2em;
+          padding-bottom: 2em;
+          overflow: hidden;
+        }
+        .contract-address a {
+          flex: 1 1 25%;
+          padding: 1em;
+          order: -1;
+        }
+
+        .roadmap-section {
+          background-position-x: 80%;
         }
       }
     </style>
@@ -163,17 +396,19 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/non-critical.css"
-    /></noscript>
+    <noscript>
+      <link rel="stylesheet" href="assets/css/non-critical.css" />
+    </noscript>
   </head>
+
   <body>
+    <!-- page-header -->
     <header class="page-header">
       <a href="index.html" class="home-link">
         <img
           class="logo"
           src="assets/images/wakanda-inu-logo.svg"
-          alt="logo"
+          alt="wakanda inu logo"
           width="50"
           height="50"
         />
@@ -195,32 +430,28 @@
         <a
           href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
           target="_blank"
-          rel="noopener"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           >Buy</a
         >
+        <a href="nft-marketplace.html">NFT Marketplace</a>
         <a href="#tokenomics">Tokenomics</a>
         <a
           href="https://snapshot.org/#/wakandainu.eth"
           target="_blank"
-          rel="noopener"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Vote
         </a>
-        <a
-          href="assets/PANTHERS-WORDS.pdf"
-          id="panthersword"
-          target="_blank"
-          rel="noopener"
-          rel="noreferrer"
+        <a href="assets/PANTHERS-WORDS.pdf" id="panthersword" target="_blank"
           >Panthers Word</a
         >
         <a href="#roadmap">Roadmap</a>
       </nav>
     </header>
+    <!-- /page-header -->
 
     <main>
+      <!-- hero -->
       <section class="hero text-center">
         <img
           class="logo"
@@ -230,87 +461,66 @@
           height="333"
         />
         <div class="subsection">
-          <p class="font-weight-bold text-primary">Wakanda Inu</p>
-          <h1>A Decentralized Meme Token</h1>
-          <p>
-            Built as a charity-oriented meme token that is entirely for social
-            good across the globe. Welcome to
-            <span class="text-primary">WAKANDA</span>
-          </p>
-          <a
-            href="assets/PANTHERS-WORDS.pdf"
-            id="panthersword"
-            class="btn-primary paper-link"
-            target="_blank"
-            rel="noopener"
-            rel="noreferrer"
+          <p
+            class="
+              font-weight-bold font-beyno
+              text-primary-light text-uppercase
+            "
           >
-            Panthers Words
-          </a>
-          <div class="community-subsection">
-            <p>Join Community</p>
-            <div class="community-link-subsection">
-              <a
-                href="https://t.me/wakandainu"
-                target="_blank"
-                rel="noopener"
-                rel="noreferrer"
-                class="community-link"
-              >
-                <img
-                  src="assets/images/logos-telegram.svg"
-                  alt="Telegram logo"
-                  loading="lazy"
-                  width="35"
-                  height="35"
-                />
-                <span>Telegram</span>
-              </a>
-              <a
-                href="https://twitter.com/Wakandainu"
-                target="_blank"
-                rel="noopener"
-                rel="noreferrer"
-                class="community-link"
-              >
-                <img
-                  src="assets/images/logos-twitter.svg"
-                  alt="Twitter logo"
-                  loading="lazy"
-                  width="35"
-                  height="35"
-                />
-                <span>Twitter</span>
-              </a>
-            </div>
+            Wakanda Inu
+          </p>
+          <h1 class="text-uppercase">
+            A Decentralized Meme Token for the
+            <span class="font-beyno font-weight-normal">african inu</span>
+          </h1>
+          <p>
+            Built as a charity-oriented meme token that is completely for
+            charity good across the globe. Welcome to
+            <span class="font-beyno text-primary-light">WAKANDA INU</span>
+          </p>
+          <div class="">
+            <a
+              href="assets/PANTHERS-WORDS.pdf"
+              id="panthersword"
+              class="btn btn-primary paper-link font-beyno"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Panthers Words
+            </a>
+            <a
+              href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary paper-link font-beyno"
+            >
+              buy wkd
+            </a>
           </div>
         </div>
       </section>
+      <!-- /hero -->
 
-      <section class="waitlist-section text-center bg-stars">
-        <h1>The World needs <span class="text-primary">$WKD</span></h1>
-        <p class="text-muted">
-          <span class="text-primary">$WKD</span> has been launched. You can now
-          buy on
-          <a
-            href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
-            target="_blank"
-            rel="noopener"
-            rel="noreferrer"
-            class="external"
+      <!-- waitlist-section -->
+      <section class="waitlist-section text-center">
+        <h1 class="font-beyno font-weight-normal header-border-bottom">
+          The World needs<br /><span class="text-primary">$WKD</span>
+        </h1>
+        <p>
+          From the depth of humanity,
+          <span class="font-beyno text-primary-light font-weight-normal"
+            >WAKANDA INU</span
           >
-            PancakeSwap</a>. More listings coming up.
+          represents the best aspects of what it means to be alive and part of a
+          community with a single purpose.
         </p>
-        <a
-          class="btn-primary"
-          href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
-          target="_blank"
-          rel="noopener"
-          rel="noreferrer"
-          >Buy $WKD</a
-        >
+        <a href="nft-marketplace.html" class="btn btn-secondary font-beyno">
+          nft marketplace
+        </a>
       </section>
+      <!-- /waitlist-section -->
 
+      <!-- tokenomics -->
       <section id="tokenomics" class="tokenomics-section">
         <div class="mobile">
           <img
@@ -339,59 +549,450 @@
         </div>
       </section>
 
-      <section id="roadmap" class="roadmap-section bg-stars">
-        <h2 class="text-center">WAKANDA FOREVER</h2>
+      <!-- exchanges -->
+      <section class="exchanges">
+        <h1
+          class="
+            font-weight-normal
+            text-center text-primary-light
+            header-border-bottom
+          "
+        >
+          13 <span class="font-beyno">exchanges and counting</span>
+        </h1>
+        <div class="exchange-list-section">
+          <div class="exchange-list">
+            <ol>
+              <li>
+                <a
+                  href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Pancakeswap</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.bkex.com/trade/WKD_USDT"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >BKEX</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.ztb.im/exchange?coin=WKD_USDT"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Zt Global</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://app.apeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Apeswap</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://boundlesspay.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Boundlesspay</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.quidax.com/markets/wkdusdt"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >QUIDAX</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://obiex.finance"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >ObieX</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://roqqu.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Roqqu</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.flitaa.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Flitaa</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.hagglex.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >HaggleX</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://exchange.tatswap.com/#/swap"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Tatswap</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.bitget.com/en/buycoin"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Bitget</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://naijacrypto.com/exchange/WKD_NGN"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Naijacrypto</a
+                >
+              </li>
+            </ol>
+          </div>
+          <div class="exchange-logo-section">
+            <img src="assets/images/exchanges.png" alt="exchange list logos" />
+          </div>
+        </div>
+        <div class="exchange-disclaimer">
+          <h3>DISCLAIMER:</h3>
+          <p>
+            <span class="font-beyno text-primary-light">WAKANDA INU</span> is a
+            decentralized experiment and, as such, we always incentivize the use
+            of DEXs. If you choose to utilize a CEX instead, remember to
+            research it first to ensure it is both safe and secure.
+          </p>
+        </div>
+        <div class="contract-address">
+          <div class="tabs">
+            <a href="#" class="btn btn-primary font-beyno current" data-tab-key="bsc">bsc</a>
+            <a href="#" class="btn btn-primary font-beyno" data-tab-key="eth">eth</a>
+          </div>
+          <textarea
+            class="text-center"
+            autocorrect="off"
+            spellcheck="false"
+            readonly
+          >0x5344c20fd242545f31723689662ac12b9556fc3d</textarea>
+          <a href="#copy" class="btn btn-primary font-beyno text-center">
+            <span>
+              <span class="tooltiptext">Copied!</span>
+              <span>copy contract address</span>
+            </span>
+            <img src="assets/images/akar-icons_copy.svg" />
+          </a>
+        </div>
+      </section>
+      <!-- /exchanges -->
+
+      <!-- chart-info -->
+      <section class="chart-section">
+        <h1
+          class="
+            font-beyno font-weight-normal
+            text-center text-primary-light
+            header-border-bottom
+          "
+        >
+          view chart and info
+        </h1>
+        <div class="chart-and-info text-uppercase font-beyno">
+          <a
+            href="https://www.coingecko.com/en/coins/wakanda-inu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >coingecko</a
+          >
+          <a
+            href="https://www.dextools.io/app/bsc/pair-explorer/0xf19f176605cb4a8da8cd6c97e36f649426e2b1a1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >dextools</a
+          >
+          <a
+            href="https://icoholder.com/en/wakanda-inu-1006845"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >icoholder</a
+          >
+          <a
+            href="https://coinmarketcap.com/currencies/wakanda-inu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >coinmarketcap</a
+          >
+          <a
+            href="https://poocoin.app/tokens/0x5344c20fd242545f31723689662ac12b9556fc3d"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >poocoin</a
+          >
+          <a
+            href="https://digitalcoinprice.com/coins/wakanda-inu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >digitalcoin</a
+          >
+          <a
+            href="https://www.certik.org/projects/wakanda-inu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            certik audit
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >blockfolio</a
+          >
+          <a
+            href="https://coinstats.app/coins/wakanda-inu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >coinstats</a
+          >
+          <a
+            href="https://www.coinbase.com/price/wakanda-inu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >coinbase</a
+          >
+          <a
+            href="https://etherscan.io/token/0x5444c30210d8a0a156178cfb8048b4137c0d40d1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >etherscan</a
+          >
+          <a
+            href="https://www.bscscan.com/token/0x5344c20fd242545f31723689662ac12b9556fc3d"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >bscscan</a
+          >
+        </div>
+      </section>
+      <!-- /chart-info -->
+
+      <!-- news-section -->
+      <section class="news-section">
+        <h1
+          class="
+            font-beyno font-weight-normal
+            text-center text-primary-light
+            header-border-bottom
+          "
+        >
+          as seen in the news
+        </h1>
+        <div>
+          <a
+            href="https://cryptotvplus.com/2021/11/africas-first-community-driven-meme-token-wakanda-inu-wkd/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img
+              src="assets/images/news/cryptotv-plus 1.png"
+              width="202"
+              height="159"
+            />
+          </a>
+          <a
+            href="https://icoholder.com/en/wakanda-inu-1006845"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img
+              src="assets/images/news/ico holder 1.png"
+              width="327"
+              height="156"
+            />
+          </a>
+          <a
+            href="https://www.globenewswire.com/news-release/2021/11/20/2338557/0/en/First-African-Meme-Token-Wakanda-Inu-Launched-As-Charity-Coin-In-November-2021.html"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img
+              src="assets/images/news/globenewswire 1.png"
+              width="367"
+              height="125"
+            />
+          </a>
+          <a
+            href="https://coinmarketbag.com/how-to-buy-wakanda-inu-on-pancakeswap/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img
+              src="assets/images/news/coinmarketbag 1.png"
+              width="462"
+              height="88"
+            />
+          </a>
+          <a
+            href="https://finance.yahoo.com/news/first-african-meme-token-wakanda-035800926.html"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img
+              src="assets/images/news/YahooFinanceLogo 1.png"
+              width="278"
+              height="102"
+            />
+          </a>
+          <a
+            href="https://techcabal.com/2021/11/12/obiex-finance-lists-wakanda-inu-and-launches-ngnx-p2p-for-easy-access-to-naira/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img
+              src="assets/images/news/tclogo-desktop 1.png"
+              width="505"
+              height="102"
+            />
+          </a>
+          <a
+            href="https://techpoint.africa/2021/11/16/meme-coins-and-wakanda-inu/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img
+              src="assets/images/news/Techpoint 1.png"
+              width="456"
+              height="109"
+            />
+          </a>
+          <a
+            href="https://disruptmagazine.com/all-you-need-to-know-about-wakanda-inu-wkd/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img
+              src="assets/images/news/disrupt-podcast-magazine-logo-1 1.png"
+              width="478"
+              height="105"
+            />
+          </a>
+        </div>
+      </section>
+      <!-- /news-section -->
+
+      <!-- roadmap-section -->
+      <section id="roadmap" class="roadmap-section">
+        <h1
+          class="
+            font-beyno font-weight-normal
+            text-center text-primary-light
+            header-border-bottom
+          "
+        >
+          WAKANDA INU FOREVER
+        </h1>
         <div class="roadmap-card-section">
           <div class="roadmap-card">
             <ul>
-              <li>Building the ecosystem.</li>
-              <li>Core team developer and other units.</li>
-              <li>Website launch.</li>
-              <li>Public Sale.</li>
-              <li>PancakeSwap listing.</li>
+              <li class="done">Building the ecosystem.</li>
+              <li class="done">Core team developer and other units.</li>
+              <li class="done">Website launch.</li>
+              <li class="done">Public Sale.</li>
+              <li class="done">PancakeSwap listing.</li>
             </ul>
           </div>
           <div class="roadmap-card">
             <ul>
-              <li>Liquidity provider and locking.</li>
-              <li>Burning of 12.5T from the treasury.</li>
-              <li>Coingecko and coinmarketcap listing.</li>
-              <li>Auditing.</li>
-              <li>
+              <li class="done">Liquidity provider and locking.</li>
+              <li class="done">Token burn.</li>
+              <li class="done">Coingecko and coinmarketcap listing.</li>
+              <li class="done">Auditing.</li>
+              <li class="done">
                 Marketing, referral campaign, advertising and promotion, KOL,
-                Wakanda Machinery, Wakanda legend, Wakanda panther.
+                Wakanda Inu Machinery, Wakanda Inu legend, Wakanda Inu panther.
               </li>
             </ul>
           </div>
           <div class="roadmap-card">
             <ul>
-              <li>Centralized exchange discussion and listing.</li>
+              <li class="done">Centralized exchange discussion and listing.</li>
               <li>
                 Community vote on what to build among (NFT, FARMING, STAKING,
                 DEX, etc).
+              </li>
+              <li>
+                Create token Bridge to swap
+                <span class="text-primary-light font-beyno">$WKD</span>
+                from BSC to other Chain (ETH, SOL, AVAX, POLYGON, FTM etc)
               </li>
             </ul>
           </div>
         </div>
       </section>
+      <!-- /roadmap-section -->
 
+      <!-- community-section -->
       <section id="community" class="community-section">
         <div class="community-section-content">
           <div class="community-section-heading">
-            <h2>community</h2>
+            <h1
+              class="
+                font-beyno font-weight-normal
+                text-center text-primary-light
+                header-border-bottom
+              "
+            >
+              community driven
+            </h1>
           </div>
-          <p>
-            Our community grows stronger every day. Please follow our social
-            platforms to get the most up-to-date, accurate
-            <span class="text-primary"> $WKD</span> information.
-          </p>
+          <div class="certification-image-container">
+            <a
+              href="https://www.certik.org/projects/wakanda-inu"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="assets/images/certik-audit.png"
+            /></a>
+          </div>
         </div>
+        <p class="text-left">
+          <span class="font-beyno text-primary-light">WAKANDA INU</span> as a
+          community grows stronger every day. Please follow our social platforms
+          to get the most up-to-date, accurate WAKANDA INU information.
+        </p>
         <div class="community-link-subsection">
           <a
             href="https://t.me/wakandainu"
             target="_blank"
-            rel="noopener"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             class="community-link"
           >
             <img
@@ -406,8 +1007,7 @@
           <a
             href="https://twitter.com/Wakandainu"
             target="_blank"
-            rel="noopener"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             class="community-link"
           >
             <img
@@ -422,8 +1022,7 @@
           <a
             href="https://fb.me/Wakandainu"
             target="_blank"
-            rel="noopener"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             class="community-link"
           >
             <img
@@ -436,48 +1035,76 @@
             <span>Facebook</span>
           </a>
           <a
-            href="mailto:partner@wakandainu.com"
+            href="https://wakandainu.medium.com"
             target="_blank"
-            rel="noopener"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             class="community-link"
           >
             <img
-              src="assets/images/logos-mail.svg"
-              alt="Mail logo"
+              src="assets/images/logos-medium.svg"
+              alt="Medium logo"
               loading="lazy"
               width="35"
               height="35"
             />
-            <span>Email</span>
+            <span>Medium</span>
+          </a>
+        </div>
+        <div class="partnership-subsection">
+          <a
+            href="mailto:partners@wakandainu.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="community-link"
+          >
+            <img src="assets/images/logos-mail.svg" />
+            <span>partnership</span>
           </a>
         </div>
       </section>
+      <!-- /community-section -->
     </main>
 
-    <footer>&copy; Copyright 2021</footer>
+    <!-- footer -->
+    <footer>&copy; <span class="font-beyno">Copyright</span> 2021</footer>
+    <!-- /footer -->
 
+    <script src="assets/js/main.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded", function () {
-        var nav = document.querySelector(".page-header nav");
-
         document
-          .querySelector(".page-header .hamburger-btn")
-          .addEventListener("click", function () {
-            nav.classList.add("show");
+          .querySelector(".contract-address > a")
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+            this.previousElementSibling.select();
+            document.execCommand("copy");
+            this.classList.add("active");
+            this.focus();
+            var that = this;
+            setTimeout(function () {
+              that.classList.remove("active");
+            }, 600);
           });
 
-        document.querySelectorAll(".page-header nav a").forEach(function (elm) {
-          elm.addEventListener("click", function (event) {
-            nav.classList.remove("show");
+        var tabBtns = document.querySelectorAll('.tabs .btn');
+        var contractAddressTextArea = document.querySelector('.contract-address textarea');
+        var addresses = {
+          bsc: '0x5344c20fd242545f31723689662ac12b9556fc3d',
+          eth: '0x5444c30210d8a0a156178cfb8048b4137c0d40d1'
+        };
+
+        tabBtns.forEach(function (btn) {
+          btn.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var that = this;
+            tabBtns.forEach(function (b) {
+              b.classList.remove('current');
+              that.classList.add('current');
+              contractAddressTextArea.textContent = addresses[that.dataset.tabKey];
+            });
           });
         });
-
-        document
-          .querySelector(".page-header nav button")
-          .addEventListener("click", function () {
-            nav.classList.remove("show");
-          });
       });
     </script>
   </body>

@@ -1,0 +1,25 @@
+{
+  "name": "wakanda-inu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://zuriwakanda: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@github.com/WakandaInu/wakanda-inu-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WakandaInu/wakanda-inu-web/issues"
+  },
+  "homepage": "https://github.com/WakandaInu/wakanda-inu-web#readme",
+  "dependencies": {
+    "@firebase/app-compat": "^0.1.10",
+    "firebase-admin": "^10.0.0",
+    "node-fetch": "^2.6.6"
+  }
+}
