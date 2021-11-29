@@ -165,6 +165,7 @@ footer {
   color: var(--btn-primary-fg);
   background-color: var(--btn-primary-bg);
   box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
 }
 .btn-secondary {
   color: var(--color-primary-light);
