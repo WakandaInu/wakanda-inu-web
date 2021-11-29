@@ -1,6 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
   var nav = document.querySelector(".page-header nav");
-  console.log(nav);
 
   document
     .querySelector(".page-header .hamburger-btn")

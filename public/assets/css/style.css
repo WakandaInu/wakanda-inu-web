@@ -149,7 +149,7 @@ footer {
   border-radius: 12px;
   padding: 1.25em;
   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
-    transform 0.25s ease-in-out;
+    transform 0.25s ease-in-out, border 0.25s ease-in-out;
   text-decoration: none;
   outline: none;
   border: none;

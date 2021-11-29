@@ -122,6 +122,29 @@
         flex-direction: column;
         width: 100%;
         border: 1px solid var(--color-primary);
+        position: relative;
+      }
+      .contract-address .tabs {
+        position: absolute;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 30%;
+        top: -30px;
+      }
+      .contract-address .tabs .btn {
+        flex:  0 0 40%;
+      }
+      .contract-address .tabs .btn:hover {
+        transform: none;
+        color: var(--btn-primary-fg);
+        background-color: var(--btn-primary-bg);
+        border-color: transparent !important;
+      }
+      .contract-address .tabs .btn:not(.current) {
+        background-color: var(--btn-primary-bg-hover);
+        border: 1px solid var(--btn-primary-bg);
       }
       .contract-address textarea {
         overflow-wrap: anywhere;
@@ -176,7 +199,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
       }
-      .chart-and-info a {
+      .chart-and-info .btn {
         text-align: center;
         overflow-wrap: break-word;
         display: flex;
@@ -246,7 +269,7 @@
       }
 
       @media (min-width: 400px) {
-        .chart-and-info a {
+        .chart-and-info .btn {
           flex-basis: 30%;
           max-width: 30%;
           font-size: 0.8em;
@@ -256,7 +279,7 @@
       }
 
       @media (min-width: 600px) {
-        .chart-and-info a {
+        .chart-and-info .btn {
           flex-basis: 22%;
           max-width: 22%;
           font-size: 0.7em;
@@ -657,14 +680,16 @@
           </p>
         </div>
         <div class="contract-address">
+          <div class="tabs">
+            <a href="#" class="btn btn-primary font-beyno current" data-tab-key="bsc">bsc</a>
+            <a href="#" class="btn btn-primary font-beyno" data-tab-key="eth">eth</a>
+          </div>
           <textarea
             class="text-center"
             autocorrect="off"
             spellcheck="false"
             readonly
-          >
-0x5344c20fd242545f31723689662ac12b9556fc3d</textarea
-          >
+          >0x5344c20fd242545f31723689662ac12b9556fc3d</textarea>
           <a href="#copy" class="btn btn-primary font-beyno text-center">
             <span>
               <span class="tooltiptext">Copied!</span>
@@ -1057,6 +1082,26 @@
               that.classList.remove("active");
             }, 600);
           });
+
+        var tabBtns = document.querySelectorAll('.tabs .btn');
+        var contractAddressTextArea = document.querySelector('.contract-address textarea');
+        var addresses = {
+          bsc: '0x5344c20fd242545f31723689662ac12b9556fc3d',
+          eth: '0x5444c30210d8a0a156178cfb8048b4137c0d40d1'
+        };
+
+        tabBtns.forEach(function (btn) {
+          btn.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var that = this;
+            tabBtns.forEach(function (b) {
+              b.classList.remove('current');
+              that.classList.add('current');
+              contractAddressTextArea.textContent = addresses[that.dataset.tabKey];
+            });
+          });
+        });
       });
     </script>
   </body>
