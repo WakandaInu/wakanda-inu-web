@@ -139,6 +139,9 @@ template {
   background-color: var(--btn-primary-bg-hover);
   color: #000;
 }
+:root {
+  --mobile-navitem-bottom-margin: 1.8em;
+}
 input {
   font-weight: bold;
 }
@@ -177,16 +180,15 @@ input::selection {
   color: var(--nav-link-color);
 }
 .page-header nav.show {
+  overflow-y: auto;
   position: fixed;
-  display: flex;
+  display: block;
   background-color: var(--dark-gray);
   height: 100%;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  flex-direction: column;
-  align-items: center;
   padding-top: 1.2em;
   z-index: 9999;
 }
@@ -206,7 +208,10 @@ input::selection {
   color: var(--nav-link-color);
 }
 .page-header nav.show a:not(:last-of-type) {
-  margin-bottom: 1.8em;
+  margin-bottom: var(--mobile-navitem-bottom-margin);
+}
+.page-header nav.show a:last-of-type {
+  margin-bottom: calc(var(--mobile-navitem-bottom-margin) * 2);
 }
 .page-header nav.show button {
   font-size: 1em;
