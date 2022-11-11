@@ -1,0 +1,580 @@
+body {
+    background-color: #000000;
+}
+
+h2 {
+    font-size: 3.75rem;
+}
+
+.bg-black {
+    background-color: #000000 !important;
+}
+
+.border-bottom-yellow {
+    border-bottom: 10px solid #fede7e;
+}
+
+.border-right-yellow {
+    border-right: 8px solid #fede7e;
+}
+
+.border-bottom-dark {
+    border-bottom: 4px solid #000000;
+}
+
+.border-radius-lg {
+    border-radius: 1.5em;
+}
+
+.border-radius-start-lg {
+    border-top-left-radius: 1.5em;
+    border-bottom-left-radius: 1.5em;
+}
+
+.border-radius-end-lg {
+    border-top-right-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+}
+
+.certik-logo {
+    width: 127px;
+    height: 30px;
+}
+
+.footer-section {
+    background-image: url('../img/Wakandainu_footer_bg.png');
+}
+
+.dot {
+    color: #05E800;
+    margin-bottom: 0;
+    /* margin-bottom: 0; */
+}
+
+.max-height-436 {
+    max-height: 436px;
+}
+
+.ms-n5 {
+    margin-left: -1.5rem;
+}
+
+.ms-n4 {
+    margin-left: -1.2rem;
+}
+
+.ms-n3 {
+    margin-left: -0.9rem;
+}
+
+.ms-n2 {
+    margin-left: -0.7rem;
+}
+
+.margin-bottom {
+    margin-bottom: 5rem;
+}
+
+
+.marketplace-section {
+    background-image: url('../img/africaan-bg.png'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    background-blend-mode: overlay;
+    max-height: 600px;
+    background-repeat: no-repeat;
+}
+
+.media-section {
+    background-image: url('../img/panther-head.svg');
+    background-color: rgba(0, 0, 0, 0.1);
+    background-repeat: no-repeat;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+
+.navbar {
+    box-shadow: 0px -2px 5px #F9A21B;
+}
+
+.navbar>div {
+    width: 81%;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.hero>div {
+    height: 650px;
+    padding-top: 4rem;
+}
+
+.hero {
+    display: flex;
+}
+
+.mascot>img {
+    position: absolute;
+    right: 0;
+    top: 10rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .action {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.action {
+    margin-top: 2em;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url('../img/heroicons-solid_menu-alt-2.svg');
+}
+
+.quick-info-section {
+    box-shadow: -1px 5px 5px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: -1px 5px 5px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -1px 5px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.why-section {
+    height: 680px;
+}
+
+.why {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.why .message {
+    flex: 1
+}
+
+.why .message>div {
+    margin-top: 10rem;
+}
+
+.why .spinning-logo {
+    flex: 1
+}
+
+.why .message h2 {
+    font-size: 3rem;
+}
+
+.spinning-logo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url('../img/why-bg-image1.svg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
+
+/* .section-stake {
+    padding: 0 8rem;
+    height: 600px ;
+}
+
+*/
+/* .section-stake .topic {
+    width: 100%;
+} */
+
+.section-stake h2 {
+    font-size: 3em;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.text-small-2 {
+    font-size: 0.6rem;
+}
+
+.text-20px {
+    font-size: 20px;
+}
+
+.text-overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-wakanda-light-yellow {
+    color: #FEDE7E;
+}
+
+.text-wakanda-yellow {
+    color: #FEDE7E !important;
+}
+
+.transparent-white {
+    background-color: rgba(255, 255, 255, 0.53);
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+.wakanda-description {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 1.3em;
+    margin-left: 25px;
+    width: 40%;
+}
+
+.wakanda-header {
+    font-family: 'angasitalic', sans-serif;
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.wakanda-light-dark {
+    background-color: #020105 !important;
+}
+
+.wakanda-dark {
+    background-color: rgba(0, 0, 0, 0.93) !important;
+}
+
+
+.wakanda-dark-yellow {
+    background-color: #EE8C1F;
+}
+
+.wakanda-gray {
+    background-color: #1A1919 !important;
+}
+
+.wakanda-gray-400 {
+    background-color: #1E1E1E !important;
+}
+
+.wakanda-gray-600 {
+    background-color: #121212 !important;
+}
+
+.wakanda-light-yellow {
+    background-color: #FEDE7E;
+}
+
+.wakanda-yellow {
+    background-color: #F9A21B;
+}
+
+.wkd-border-gradient-left {
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgba(254, 222, 126, 1), rgba(254, 222, 126, 0));
+    border-image-slice: 1;
+}
+
+.wkd-border-gradient-right {
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to left, rgba(254, 222, 126, 1), rgba(254, 222, 126, 0));
+    border-image-slice: 1;
+}
+
+.negative-z-index {
+    z-index: -99;
+}
+
+.positive-z-index {
+    z-index: 1;
+}
+
+/* @media only screen and (min-width: 576px) {
+
+    .paddingX {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+} */
+
+@media only screen and (min-width: 768px) {
+    .hero {
+        /* padding-left: 8rem; */
+    }
+
+    .hero-text {
+        padding-left: 8rem;
+    }
+
+    .paddingX {
+        padding-left: 8rem !important;
+        padding-right: 8rem !important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .wakanda-header {
+        font-family: 'angasitalic', sans-serif;
+        font-size: 2rem;
+    }
+
+    .mascot>img {
+        /* position: static; */
+        height: 35%;
+        top: 5rem;
+        right: 0%;
+    }
+
+    .wakanda-description {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+
+        /* padding: 0 3em; */
+    }
+
+}
+
+@media only screen and (max-width: 1011px) {
+    .mascot img {
+        top: 32rem;
+        right: 0%;
+        height: 50%;
+    }
+
+    .hero>div {
+        height: 750px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    h2 {
+        font-size: 3rem;
+    }
+
+    .rotating-coin-bg {
+        background-image: url('../img/why-bg-image1.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-size: cover; */
+        background-size: 100% 100%;
+    }
+
+    .why .message {
+        /* position: absolute; */
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: center; */
+        background-image: url('../img/why-bg-image1.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 300px 450px;
+    }
+
+    .why-section {
+        height: 500px;
+    }
+
+    .why {
+        /* position: relative; */
+        /* height: 300px; */
+    }
+
+    .why .message {
+        margin: 0;
+        /* position: absolute; */
+    }
+
+    .why .message>div {
+        margin-top: 3rem;
+    }
+
+    .why .message h2 {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        display: flex;
+        position: static;
+    }
+
+    .hero .action {
+        width: 100%;
+        display: block;
+    }
+
+    .mascot>img {
+        top: 30rem;
+        height: 40%;
+        right: 0%;
+    }
+
+    .section-stake {
+        padding: 0;
+    }
+
+    .section-stake h2 {
+        font-size: 30px;
+    }
+
+    .certik-logo {
+        width: 74px;
+        height: 18px;
+    }
+
+    .dot {
+        margin-bottom: 1rem;
+        height: 5px;
+        width: 5px;
+        display: inline-block;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .social-icons {
+        padding-left: 1.1em;
+        padding-right: 1.1em;
+    }
+
+    .text-small {
+        font-size: 0.6rem;
+    }
+
+
+    .wakanda-header {
+        font-family: 'angasitalic', sans-serif;
+        font-size: 2.1rem;
+    }
+
+    .wakanda-description {
+        /* font-family: 'Inter', sans-serif;
+        font-style: italic; */
+        margin-left: 0;
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+}
+
+.angas-font {
+    font-family: 'angasitalic', sans-serif;
+}
+
+.givonic-font {
+    font-family: "givonic_demoregular", sans-erif;
+}
+
+.inter-font {
+    font-family: 'Inter', sans-serif;
+}
+
+.poppins-font {
+    font-family: "Poppins", sans-serif;
+}
+
+@font-face {
+    font-family: 'angasitalic';
+    src: url('fonts/angasitalic-1g6lm-webfont.woff2') format('woff2'),
+        url('fonts/angasitalic-1g6lm-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'givonic_demoregular';
+    src: url('fonts/givonic/givonicdemo-2oy0x-webfont.woff2') format('woff2'),
+        url('fonts/givonic/givonicdemo-2oy0x-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Gradient button with border-radius */
+
+/* border-image: linear-gradient(98deg, blue, #ff000000) 1;
+border-width: 6px;
+border-style: solid;
+width: 15%;
+text-align: center;  */
+
+.button {
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #00a84f;
+    display: block;
+    /* font: 1.125rem 'Oswald', Arial, sans-serif; */
+    /* 18 */
+    height: 40px;
+    letter-spacing: 1px;
+    padding: 1px;
+    position: relative;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    z-index: 2;
+}
+
+.left {
+    background-image: linear-gradient(to right, rgba(254, 222, 126, 1), rgba(254, 222, 126, 0));
+}
+
+.right {
+    background-image: linear-gradient(to left, rgba(254, 222, 126, 1), rgba(254, 222, 126, 0));
+}
+
+.left-right {
+    background-image: linear-gradient(to left, rgba(254, 222, 126, 1), rgba(254, 222, 126, 0), rgba(254, 222, 126, 1));
+}
+
+.button:hover {
+    color: #fff;
+}
+
+.button span {
+    align-items: center;
+    background: #221f1f;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background .5s ease;
+    width: 100%;
+}
+
+.button:hover span {
+    background: transparent;
+}
+
+.button .icon-img-left {
+    position: absolute;
+    left: -10px;
+}
+
+.button .icon-img-right {
+    position: absolute;
+    right: -10px;
+}

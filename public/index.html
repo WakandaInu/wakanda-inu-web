@@ -1,1126 +1,774 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Wakanda Inu - A Decentralized Meme Token"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="favicon.png" />
-    <title>Wakanda Inu - A Decentralized Meme Token</title>
-    <style type="text/css">
-      .hero .subsection div:last-of-type {
-        display: flex;
-        flex-direction: column;
-      }
-      .hero .subsection div:last-of-type .paper-link:first-of-type {
-        margin-bottom: 1.75em;
-      }
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakanda Inu | Home</title>
+    <link rel="icon" type="image/png" href="img/wakandainu-logo%201.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/mobile_menu.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/popup.css">
+</head>
 
-      @media (min-width: 768px) {
-        .hero .subsection div:last-of-type {
-          flex-direction: row;
-          justify-content: flex-start;
-        }
-        .hero .subsection div:last-of-type .paper-link {
-          flex: 0 0 35%;
-        }
-        .hero .subsection div:last-of-type .paper-link:first-of-type {
-          margin-bottom: 0;
-          margin-right: 1em;
-        }
-      }
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2 navbar-box-shadow">
+        <div class="container-fluid px-0">
+            <a class="navbar-brand" href="#"> <img src="img/wakandainu-logo%201.svg" alt="" width="50" height="50"> </a>
+            <div class="navbar-toggler d-flex px-0">
+                <div class="d-lg-none">
+                    <a class="btn btn-warning wakanda-yellow rounded-pill fw-bolder text-white"> <img
+                            src="img/wakandainu2-logo.svg" alt="wkd-logo" width="20" height="20">
+                        Launch App </a>
+                </div>
+                <button class=" navbar-toggler custom-toggler" onclick="openNav()" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bolder" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" target="_blank"
+                            href="https://snapshot.org/#/wakandainu.eth">Governance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="#community">Community</a>
+                    </li>
+                </ul>
+                <div class="d-flex me-3">
+                    <a target="_blank" href="https://dex.wakandainu.com"
+                        class="btn btn-warning wakanda-yellow rounded-pill fw-bolder text-white"> <img
+                            src="img/wakandainu2-logo.svg" alt="wkd-logo" width="30" height="30">
+                        Launch App </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="myNav" class="overlay d-flex flex-column justify-content-center">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <div class="content">
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a target="_blank" href="https://snapshot.org/#/wakandainu.eth">Governance<img src="img/arrow-link-out.svg"
+                    alt="governance-link" /></a>
+            <a href="#">Community</a>
+            <div class="d-flex justify-content-center mt-5">
+                <a target="_blank" href="https://dex.wakandainu.com"
+                    class="btn btn-warning wakanda-yellow rounded-pill fw-bold text-white swap-btn"> <img
+                        src="img/wakandainu2-logo.svg" alt="wkd-logo" width="40" height="40">
+                    Launch App </a>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile menu end -->
+    <div class="bg-black hero-div">
+        <div class="hero py-5">
+            <div class="col-sm-12 col-md-7 justify-content-center">
+                <div class="w-100 hero-text position-absolute">
+                    <h1 class="text-white text-center text-md-start wakanda-header">WAKANDA INU</h1>
+                    <p class="text-white text-center text-md-start wakanda-description">
+                        A decentralized charity-oriented meme token with the single purpose of revealing the best part
+                        of being human. </p>
+                    <div class="action row ms-0 d-flex justify-content-center justify-content-md-start">
+                        <a target="_blank" href="https://dex.wakandainu.com/swap"
+                            class="button left col-5 col-md-5 col-lg-3 col-d-flex justify-content-start"> <span
+                                class="wakanda-gray text-small text-center inter-font text-white ps-4 py-2"> <img
+                                    class="icon-img-left mt-1 px-0 d-flex justify-content-end" style="z-index: 3"
+                                    src="img/wakandainu-logo%201.svg" alt="wkd-logo" width="20" height="20">
+                                BUY $WKD </span> </a>
+                        <!-- <div class="d-none d-lg-block col-lg-1"></div> -->
+                        <a target="_blank"
+                            href="https://www.dextools.io/app/en/bnb/pair-explorer/0xf19f176605cb4a8da8cd6c97e36f649426e2b1a1"
+                            class=" button right col-5 col-md-5 col-lg-3 d-flex justify-content-start"> <span
+                                class="wakanda-gray text-small inter-font text-white pe-4 py-2"> <span
+                                    class="dot w-25 wakanda-gray">●</span> <span class="w-100 wakanda-gray">&nbsp; LIVE
+                                    CHART </span> <img class="icon-img-right" src="img/wakandainu-logo%201.svg"
+                                    alt="wkd-logo" width="20" height="20"> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mascot">
+                <img src="img/wakanda-inu-panther.svg" alt="wkd-panther" class="panther img-fluid" />
+            </div>
+        </div>
+        <section class="wakanda-gray py-5 px-3 mt-5 paddingX ">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center rotating-coin-bg">
+                    <div class="">
+                        <h2 class="text-white">
+                            Why <span class="angas-font text-wakanda-yellow"> $WKD </span> </h2>
+                        <p class="text-white givonic-font my-4">
+                            Built as a charity-oriented meme token that is completely for charity good across
+                            the globe. <span class="angas-font">WAKANDA INU </span> represents the best aspects of what
+                            it
+                            means
+                            to be alive
+                            and part of a community with a single purpose from the depth of humanity, and
+                            create a decentralized meme token for the African Inu. </p>
+                        <div
+                            class="row wakanda-gray-400 border-bottom-dark rounded-bottom d-flex justify-content-center py-2">
+                            <div class="col-6 col-md-5 d-flex justify-content-center align-items-center">
+                                <p class="dot w-25 wakanda-gray ">●
+                                <div>
+                                    <img src="img/certik-logotype-h-w.svg" alt="wkd-logo" class="certik-logo">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-5 text-end">
+                                <a target="_blank" href="https://www.certik.com/projects/wakanda-inu"
+                                    class="button left text-white text-small"> <span class="wakanda-gray"> View Audit
+                                        Report </span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="">
+                        <img class="img-fluid" src="img/ezgif.com-gif-maker.gif" alt="wkd-logo" width="400"
+                            height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-stake wakanda-gray-600 pb-2 pt-5">
+            <div class="row d-flex justify-content-center margin-bottom">
+                <div class="d-none d-md-block col-md-5 stake-img">
+                    <img class="img-fluid" src="img/DEX.WAKANDA.COM.svg" alt="wkd-logo">
+                </div>
+                <!-- <div class="d-lg-none col-10 d-flex justify-content-center mb-5 stake-img">
+                    <img class="img-fluid" src="img/coin-image-tbg-2.png" alt="wkd-logo">
+                </div> -->
+                <div class=" col-10 col-md-5 d-flex flex-column justify-content-center topic">
+                    <h2 class="text-white text-end fw-bolder">
+                        Stake, Earn <span class="inter-font text-wakanda-yellow angas-font"> $WKD </span> </h2>
+                    <p class="text-white text-end"> <span class="text-wakanda-yellow inter-font fw-bolder">WKD
+                            Swap</span> is the flagship products of
+                        the <span class="text-wakanda-yellow angas-font fw-bolder">WAKANDA INU </span> ecosystem, it
+                        offers you the option
+                        to make your <span class="text-wakanda-yellow inter-font fw-bolder">$WKD token </span> work for
+                        you and <span class="text-wakanda-yellow inter-font fw-bolder">farm other tokens.</span> Just
+                        stake some <span class="text-wakanda-yellow inter-font fw-bolder"> $WKD </span> tokens
+                        to earn High APR, low risk </p>
+                    <div class="row d-flex justify-content-end">
+                        <a target="_blank" href="https://dex.wakandainu.com/pools"
+                            class="button left col-10 col-md-8 col-lg-6 d-flex flex-row justify-content-end mt-5"> <span
+                                class="text-white wakanda-dark text-end py-1 poppins-font w-100 "> <img
+                                    src="img/wakandainu2-logo.svg" alt="wkd-logo2" width="25" height="25">
+                                &nbsp; STAKE & EARN $WKD </span> </a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row w-75 mx-auto wakanda-gray border-radius-lg my-5 quick-info-section">
+                <div class="row mx-auto my-3 d-flex justify-content-center">
+                    <a target="_blank" href="https://dex.wakandainu.com/swap"
+                        class="button left col-3 col-md-2 col-lg-2 d-flex justify-content-end "> <span
+                            class="wakanda-gray-600 text-small-2 text-center inter-font text-white ps-4 py-2"> <img
+                                class="icon-img-left positive-z-index mt-1" src="img/wakandainu-logo%201.svg"
+                                alt="wkd-logo" width="20" height="20">
+                            BUY $WKD </span> </a>
+                    <div class="col-4 col-sm-4 col-md-3">
+                        <h4 class="inter-font text-white text-center fw-bolder">
+                            Quick Info </h4>
+                    </div>
+                    <a target="_blank"
+                        href="https://www.dextools.io/app/en/bnb/pair-explorer/0xf19f176605cb4a8da8cd6c97e36f649426e2b1a1"
+                        class="button right col-3 col-md-2 col-lg-2 d-flex justify-content-start"> <span
+                            class="wakanda-gray-600 text-small-2 inter-font text-white pe-4 py-2"> <span
+                                class="dot w-25 wakanda-gray-600 ">●</span>
+                            &nbsp; LIVE CHART <img class="icon-img-right mt-1" src="img/wakandainu-logo%201.svg"
+                                alt="wkd-logo" width="20" height="20"> </span> </a>
+                </div>
+                <div class="row mx-auto py-2 popup ">
+                    <span class="popuptext" id="myPopup">Copied!</span>
+                    <div class=" col-12 d-flex justify-content-center my-3">
+                        <div
+                            class=" text-white poppins-font fw-bolder wakanda-dark-yellow border-radius-start-lg py-2 px-3 ">
+                            <span class="d-none d-md-block"> BSC(BEP20) </span>
+                            <span class="d-md-none"> BSC </span>
+                        </div>
+                        <div id="bsc-address"
+                            class="d-none d-md-block text-wakanda-light-yellow poppins-font text-overflow-ellipsis transparent-white px-4 py-2 m-0 ">
+                            0x5344c20fd242545f31723689662ac12b9556fc3d
+                        </div>
+                        <div id="bsc-address"
+                            class="d-md-none text-wakanda-light-yellow poppins-font text-overflow-ellipsis transparent-white px-4 py-2 m-0 ">
+                            0x53...c3d
+                        </div>
+                        <div onclick="copyToClipboard('0x5344c20fd242545f31723689662ac12b9556fc3d')"
+                            class="wakanda-light-yellow text-white poppins-font fw-bolder border-radius-end-lg m-0 px-3 py-2 ">
+                            <img class="" src="img/copy-icon.svg" alt="wkd-logo" width="14" height="14">
+                            <span class="d-none d-lg-inline-block">COPY</span>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center my-3">
+                        <div
+                            class=" text-white poppins-font fw-bolder wakanda-dark-yellow border-radius-start-lg py-2 px-3 ">
+                            <span class="d-none d-md-block"> ETHEREUM &nbsp; &nbsp;</span>
+                            <span class="d-md-none"> ETH </span>
+                        </div>
+                        <div id="eth-address"
+                            class="d-none d-md-block text-wakanda-light-yellow poppins-font text-overflow-ellipsis transparent-white px-4 py-2 m-0 ">
+                            0x5444c30210d8a0a156178cfb8048b4137c0d40d1
+                        </div>
 
-      .tokenomics-section {
-        background-color: #000;
-        padding-left: 0.1em;
-        padding-right: 0.1em;
-      }
-      .tokenomics-section .desktop {
-        display: none;
-      }
-      .tokenomics-section .desktop img {
-        margin: 0 auto;
-        width: 70%;
-        height: auto;
-      }
-      .tokenomics-section .mobile {
-        width: 95%;
-      }
-      .tokenomics-section .mobile,
-      .tokenomics-section img {
-        display: block;
-      }
-      .tokenomics-section .mobile img {
-        width: 70%;
-        margin: 0 auto;
-        height: auto;
-      }
-      .tokenomics-section .mobile img:first-of-type {
-        width: 100%;
-      }
+                        <div id="eth-address"
+                            class="d-md-none text-wakanda-light-yellow poppins-font text-overflow-ellipsis transparent-white px-4 py-2 m-0 ">
+                            0x54...0d1
+                        </div>
 
-      .exchange-list {
-        display: none;
-      }
-      .exchange-list a:hover {
-        text-decoration: underline;
-      }
-      .exchange-list-section {
-        width: 100%;
-      }
-      .exchange-logo-section img {
-        width: 85%;
-        margin: 0 auto;
-        display: block;
-      }
-      .exchange-disclaimer {
-        margin-bottom: 2em;
-        padding-top: 1.5em;
-      }
-      .exchange-disclaimer h3 {
-        margin-bottom: -0.25em;
-      }
+                        <div onclick="copyToClipboard('0x5444c30210d8a0a156178cfb8048b4137c0d40d1')"
+                            class="wakanda-light-yellow text-white poppins-font fw-bolder border-radius-end-lg m-0 px-3 py-2 ">
+                            <img class="" src="img/copy-icon.svg" alt="wkd-logo" width="14" height="14">
+                            <span class="d-none d-lg-inline-block">COPY</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-12 col-sm-3 my-3">
+                        <a target="_blank" href="https://www.coingecko.com/en/coins/wakanda-inu"> <img class="img-fluid"
+                                src="img/logo-coingecko.svg" alt="coingecko-logo"> </a>
+                    </div>
+                    <div class="col-12 col-sm-3 my-3">
+                        <a target="_blank" href="https://coinmarketcap.com/currencies/wakanda-inu/"> <img
+                                class="img-fluid" src="img/coinmarketcap-logo.svg" alt="coinmarketcap-logo"> </a>
+                    </div>
+                    <div class="col-12 col-sm-3 my-3">
+                        <a target="_blank"
+                            href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d">
+                            <img class="img-fluid" src="img/PancakeSwap-Crypto-Logo-PNG-Pic.svg" alt="pancakeswap-logo">
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-3 my-3">
+                        <a target="_blank"
+                            href="https://www.dextools.io/app/bsc/pair-explorer/0xf19f176605cb4a8da8cd6c97e36f649426e2b1a1">
+                            <img class="img-fluid" src="img/dextools_logo_full_dark.svg" alt="dextools-logo"> </a>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col">
+                        <p class="poppins-font text-wakanda-yellow text-small-2"> <span class="fw-bolder"> DISCLAIMER:
+                            </span> WAKANDA INU is a decentralized experiment and, as such, we always incentivize the
+                            use of DEXs. If you choose to utilize a CEX instead, remember to research it first to ensure
+                            it is both safe and secure. </p>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+        <div id="products" class="row marketplace-section p-5">
+            <div class="col-12 col-md-6 my-5 text-break">
+                <h2 class="text-white"> <span class="inter-font text-wakanda-yellow"> NFTs </span> Marketplace </h2>
+                <p class="text-white givonic-font fst-italic"> <span
+                        class="angas-font wakanda-description text-wakanda-yellow"> WAKANDA INU NFT </span> is a digital
+                    marketplace where you can mint, collect,
+                    discover and showcase your NFTs, all in one place </p>
+                <div class="row mt-4">
+                    <a target="_blank" href="https://nft.wakandainu.app"
+                        class="button left col-10 col-sm-6 col-md-5 col-lg-5 d-flex justify-content-start "> <span
+                            class=" text-small-2 text-center inter-font text-white ps-3 py-2"> <img
+                                class="icon-img-left positive-z-index mt-1" src="img/wakandainu-logo%201.svg"
+                                alt="wkd-logo" width="20" height="20">
+                            EXPLORE NFTS MARKETPLACE </span> </a>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex flex-row my-5">
+                <!-- <video class="img-fluid " preload="metadata" src="https://youtu.be/EPLbQPKO9AA">Your
+                    browser doesn't support HTML5 video tag.</video> -->
+                <div class="ratio ratio-16x9 d-none d-md-block">
+                    <iframe src="https://www.youtube.com/embed/EPLbQPKO9AA" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <!-- <img class="img-fluid d-none d-md-block " src="img/video-dummy.svg" alt="dummy-video"> -->
+            </div>
+        </div>
+        <div class="row wakanda-dark launchpad-section pt-5">
+            <div class="row mt-5 mb-3 d-flex justify-content-center">
+                <div class="col-10 col-md-6 d-flex pe-5 py-3">
+                    <img class="img-fluid " src="img/rocket.svg" alt="dummy-video">
+                </div>
+                <div class="col-10 col-md-5 col-md-5 p-2 text-break">
+                    <h2 class="text-white text-end"> <span class="inter-font text-wakanda-yellow"> $WKD </span>
+                        Launchpad </h2>
+                    <p class="text-white text-end givonic-font fst-italic"> <span
+                            class="angas-font wakanda-description text-wakanda-yellow"> WAKANDA INU LAUNCHPAD </span>
+                        is a decentralized platform that enables users to launch and create
+                        initial
+                        token sale for their token, with no coding knowledge in few seconds.All Tokens will be verified
+                        before launch.
+                    </p>
+                    <div class="row d-flex justify-content-end">
+                        <a class="button right col-8 col-md-6 col-lg-4 d-flex justify-content-end"> <span
+                                class="wakanda-gray text-small-2 inter-font text-white pe-4 py-2"> COMING
+                                SOON <img class="icon-img-right mt-1" src="img/wakandainu-logo%201.svg" alt="wkd-logo"
+                                    width="20" height="20"> </span> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-10 col-md-5 col-md-5 p-2 text-break order-2 order-md-1 ">
+                    <h2 class="text-white text-start"> <span class="inter-font text-wakanda-yellow"> Liquidity </span>
+                        Farming </h2>
+                    <p class="text-white text-start givonic-font fst-italic">
+                        Earn more tokens passively when you farm it. <span
+                            class="inter-font text-wakanda-yellow fw-bolder"> $WKD </span> token is at the heart of the
+                        <span class="angas-font wakanda-description text-wakanda-yellow"> WAKANDA INU </span>
+                        ecosystem. Gift it, Buy it, win it, farm it, spend it, stake it... Woof! you can even
+                        vote with it!
+                    </p>
+                    <div class="row">
+                        <a href="https://dex.wakandainu.com/pools"
+                            class="button left col-8 col-md-6 col-lg-4 d-flex justify-content-start "> <span
+                                class="wakanda-gray text-small-2 text-center inter-font text-white ps-4 py-2"> <img
+                                    class="icon-img-left positive-z-index mt-1" src="img/wakandainu-logo%201.svg"
+                                    alt="wkd-logo" width="20" height="20">
+                                $WKD Farming </span> </a>
+                    </div>
+                </div>
+                <div class="col-10 col-md-6 d-flex justify-content-end ps-5 order-1 order-md-2">
+                    <img class="img-fluid pb-5 " src="img/coins-pile.svg" alt="dummy-video">
+                </div>
+            </div>
+            <div class="row wakanda-gray impact-section mx-auto">
+                <div class="row d-flex justify-content-center my-5">
+                    <div class="col-12 col-md-8 text-break">
+                        <h2 class="text-white text-center"> <span class="inter-font text-wakanda-yellow"> Wakanda Inu
+                            </span>
+                            Impact </h2>
+                        <p class="text-white text-center givonic-font fst-italic"> <span
+                                class="angas-font wakanda-description text-wakanda-yellow"> WAKANDA INU </span>
+                            represents the daily struggles and aspirations of the best aspects of what it means to
+                            be alive as a community. </p>
+                        <p class="text-white text-center givonic-font fst-italic">
+                            True to our ideals,<span class="inter-font wakanda-description text-wakanda-yellow"> Wakanda
+                                Inu </span> commissions a Solar-Powered
+                            Borehole in Biala Community, Kwara State, Nigeria. And a water-borehole in Belishee,
+                            Northern Ghana. </p>
+                        <div class="row mx-auto my-3 d-flex justify-content-center">
+                            <a target="_blank" href="https://dex.wakandainu.com/swap"
+                                class=" button left-right col-8 col-sm-5 col-md-4 col-lg-3 d-flex justify-content-center ">
+                                <img class=" icon-img-left positive-z-index mt-2" src="img/wakandainu-logo%201.svg"
+                                    alt="wkd-logo" width="20" height="20"> <span
+                                    class=" text-small-2 text-center inter-font text-white py-2">
+                                    BUY <span class="text-wakanda-yellow fw-bold w-auto p-2"> $WKD </span> Today </span>
+                                <img class="icon-img-right mt-2" src="img/wakandainu-logo%201.svg" alt="wkd-logo"
+                                    width="20" height="20"> </a>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center d-none d-sm-flex mt-4">
+                        <div class="col-3 ">
+                            <img class="img-fluid" src="img/Impact-1.png" alt="wkd-logo">
+                        </div>
+                        <div class="col-3 d-flex flex-column justify-content-evenly">
+                            <div class="row">
+                                <div class="col-6 ps-0">
+                                    <img class="img-fluid" src="img/Impact-2.png" alt="wkd-logo">
+                                </div>
+                                <div class="col-6 pe-0">
+                                    <img class="img-fluid" src="img/Impact-3.png" alt="wkd-logo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0">
+                                    <img class="img-fluid" src="img/Impact-4.png" alt="wkd-logo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <img class="img-fluid" src="img/Impact-5.png" alt="wkd-logo">
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center mt-5">
+                        <div class="col-12 col-sm-12 d-sm-none">
+                            <section class="splide" aria-label="Splide Basic HTML Example">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="col-12 d-flex justify-content-center splide__slide">
+                                            <img class="img-fluid" src="img/Impact-1.png" alt="wkd-logo">
+                                        </div>
+                                        <div class="col-12 d-flex flex-column justify-content-evenly splide__slide">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <img class="img-fluid" src="img/Impact-2.png" alt="wkd-logo">
+                                                </div>
+                                                <div class="col-6">
+                                                    <img class="img-fluid" src="img/Impact-3.png" alt="wkd-logo">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <img class="img-fluid" src="img/Impact-4.png" alt="wkd-logo">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-center splide__slide">
+                                            <img class="img-fluid" src="img/Impact-5.png" alt="wkd-logo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center my-5 pt-5">
+                        <div class="col-11 col-md-8 d-flex justify-content-center">
+                            <!-- <img class="img-fluid max-height-436" src="img/video-placeholder.png" /> -->
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/SZhMmu8fpQ0" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row w-75 my-5 media-section">
+                        <div class="col-12 d-md-flex">
+                            <div class="d-none d-md-block d-flex my-auto col-md-1 border-right-yellow">
+                                <p class="text-white poppins-font fw-bolder ">
+                                    As seen in the media </p>
+                            </div>
+                            <div class="d-md-none col-md-1 border-bottom-yellow my-3">
+                                <p class="text-white text-center poppins-font fw-bolder ">
+                                    As seen in the media </p>
+                            </div>
+                            <div class="col-md-11 px-4">
+                                <div class="row">
+                                    <div class="col-12 col-md-3 d-flex justify-content-center my-3">
+                                        <a target="_blank"
+                                            href="https://cryptotvplus.com/2021/11/africas-first-community-driven-meme-token-wakanda-inu-wkd/">
+                                            <img class="img-fluid" src="img/cryptotv-plus.svg" alt="ctv-logo" /> </a>
+                                    </div>
+                                    <div class="col-12 col-md-3 d-flex justify-content-center my-3">
+                                        <a target="_blank"
+                                            href="https://finance.yahoo.com/news/first-african-meme-token-wakanda-035800926.html">
+                                            <img class="img-fluid" src="img/YahooFinanceLogo.png" alt="yahoo-logo" />
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md-3 d-flex justify-content-center my-3">
+                                        <a target="_blank"
+                                            href="https://guardian.ng/features/wakanda-inu-the-african-crypto-blazing-the-trail-with-real-world-social-impact/">
+                                            <img class="img-fluid" src="img/guardian-conscience.svg"
+                                                alt="guardian-logo" /> </a>
+                                    </div>
+                                    <div class="col-12 col-md-3 d-flex justify-content-center my-3">
+                                        <a target="_blank"
+                                            href="https://techpoint.africa/2021/11/16/meme-coins-and-wakanda-inu/"> <img
+                                                class="img-fluid" src="img/Techpoint.svg" alt="logo" /> </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-3 d-flex justify-content-center my-3">
+                                        <a target="_blank"
+                                            href="https://techcabal.com/2021/11/12/obiex-finance-lists-wakanda-inu-and-launches-ngnx-p2p-for-easy-access-to-naira/">
+                                            <img class="img-fluid" src="img/tclogo-desktop.svg" alt="logo" /> </a>
+                                    </div>
+                                    <div class="col-12 col-md-3 d-flex justify-content-center my-3">
+                                        <a target="_blank"
+                                            href="https://bitcoinke.io/2021/11/the-inspiring-story-of-wakanda-inu/">
+                                            <img class="img-fluid" src="img/BitKE-Logo-Dark-smallS.svg"
+                                                alt="bitcoinke-logo" /> </a>
+                                    </div>
+                                    <div class="col-12 col-md-3 d-flex justify-content-center my-3">
+                                        <a target="_blank"
+                                            href="https://disruptmagazine.com/all-you-need-to-know-about-wakanda-inu-wkd/">
+                                            <img class="img-fluid" src="img/disrupt-podcast-magazine-logo.svg"
+                                                alt="logo" /> </a>
+                                    </div>
+                                    <div class="col-12 col-md-3 d-flex justify-content-center my-3">
+                                        <a target="_blank"
+                                            href="https://coinmarketbag.com/how-to-buy-wakanda-inu-on-pancakeswap/">
+                                            <img class="img-fluid" src="img/coinmarketbag.svg" alt="logo" /> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
 
-      .chart-section,
-      .news-section {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
+                <!-- QUICK info -->
 
-      .news-section {
-        min-height: 700px;
-      }
-      .news-section h1 {
-        margin: 0;
-      }
-      .news-section div {
-        display: flex;
-        margin-top: 1em;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .news-section div a {
-        flex: 0 0 22%;
-        margin: 1em 0.25em;
-      }
-      .news-section div a img {
-        width: 100%;
-        height: auto;
-      }
+                <div class="row w-75 mx-auto wakanda-gray border-radius-lg my-5 quick-info-section">
+                    <div class="row mx-auto my-3 d-flex justify-content-center">
+                        <a target="_blank" href="https://dex.wakandainu.com/swap"
+                            class="button left col-3 col-md-2 col-lg-2 d-flex justify-content-end "> <span
+                                class="wakanda-gray-600 text-small-2 text-center inter-font text-white ps-4 py-2"> <img
+                                    class="icon-img-left positive-z-index mt-1" src="img/wakandainu-logo%201.svg"
+                                    alt="wkd-logo" width="20" height="20">
+                                BUY $WKD </span> </a>
+                        <div class="col-4 col-sm-4 col-md-3">
+                            <h4 class="inter-font text-white text-center fw-bolder">
+                                Quick Info </h4>
+                        </div>
+                        <a target="_blank"
+                            href="https://www.dextools.io/app/en/bnb/pair-explorer/0xf19f176605cb4a8da8cd6c97e36f649426e2b1a1"
+                            class="button right col-3 col-md-2 col-lg-2 d-flex justify-content-start"> <span
+                                class="wakanda-gray-600 text-small-2 inter-font text-white pe-4 py-2"> <span
+                                    class="dot w-25 wakanda-gray-600 ">●</span>
+                                &nbsp; LIVE CHART <img class="icon-img-right mt-1" src="img/wakandainu-logo%201.svg"
+                                    alt="wkd-logo" width="20" height="20"> </span> </a>
+                    </div>
+                    <div class="row mx-auto py-2 popup ">
+                        <span class="popuptext" id="myPopup">Copied!</span>
+                        <div class=" col-12 d-flex justify-content-center my-3">
+                            <div
+                                class=" text-white poppins-font fw-bolder wakanda-dark-yellow border-radius-start-lg py-2 px-3 ">
+                                <span class="d-none d-md-block"> BSC(BEP20) </span>
+                                <span class="d-md-none"> BSC </span>
+                            </div>
+                            <div id="bsc-address"
+                                class="d-none d-md-block text-wakanda-light-yellow poppins-font text-overflow-ellipsis transparent-white px-4 py-2 m-0 ">
+                                0x5344c20fd242545f31723689662ac12b9556fc3d
+                            </div>
+                            <div id="bsc-address"
+                                class="d-md-none text-wakanda-light-yellow poppins-font text-overflow-ellipsis transparent-white px-4 py-2 m-0 ">
+                                0x53...c3d
+                            </div>
+                            <div onclick="copyToClipboard('0x5344c20fd242545f31723689662ac12b9556fc3d')"
+                                class="wakanda-light-yellow text-white poppins-font fw-bolder border-radius-end-lg m-0 px-3 py-2 ">
+                                <img class="" src="img/copy-icon.svg" alt="wkd-logo" width="14" height="14">
+                                <span class="d-none d-lg-inline-block">COPY</span>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center my-3">
+                            <div
+                                class=" text-white poppins-font fw-bolder wakanda-dark-yellow border-radius-start-lg py-2 px-3 ">
+                                <span class="d-none d-md-block"> ETHEREUM &nbsp; &nbsp;</span>
+                                <span class="d-md-none"> ETH </span>
+                            </div>
+                            <div id="eth-address"
+                                class="d-none d-md-block text-wakanda-light-yellow poppins-font text-overflow-ellipsis transparent-white px-4 py-2 m-0 ">
+                                0x5444c30210d8a0a156178cfb8048b4137c0d40d1
+                            </div>
 
-      .contract-address {
-        background-color: rgba(238, 140, 31, 0.1);
-        box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.15);
-        border-radius: 12px;
-        padding: 2em 1em;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        border: 1px solid var(--color-primary);
-        position: relative;
-      }
-      .contract-address .tabs {
-        position: absolute;
-        width: 40%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        left: 30%;
-        top: -12.5%;
-      }
-      .contract-address .tabs .btn {
-        flex:  0 0 30%;
-      }
-      .contract-address .tabs .btn:hover {
-        transform: none;
-        color: var(--btn-primary-fg);
-        background-color: var(--btn-primary-bg);
-        border-color: var(--color-primary-light) !important;
-      }
-      .contract-address .tabs .btn:not(.current) {
-        background-color: var(--btn-primary-bg-hover);
-        border: 1px solid var(--btn-primary-bg);
-      }
-      .contract-address textarea {
-        overflow-wrap: anywhere;
-        font-size: 1.2em;
-        color: var(--color-primary-light);
-        background-color: transparent;
-        border: none;
-        height: 4em;
-        resize: none;
-        letter-spacing: 0.06em;
-        font-weight: bold;
-      }
-      .contract-address textarea:focus-visible {
-        outline: none;
-      }
-      .contract-address .btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: small;
-        padding-left: 0.6em;
-        padding-right: 0.6em;
-        position: relative;
-      }
-      .contract-address .btn .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: black;
-        color: var(--color-primary-light);
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 6px;
-        border: 1px solid var(--color-primary-light);
-        position: absolute;
-        z-index: 1;
-        top: -55px;
-        left: 25%;
-      }
-      .contract-address .btn.active .tooltiptext {
-        visibility: visible;
-      }
-      .contract-address .btn span:not(.tooltiptext) {
-        margin-right: 0.75em;
-        position: relative;
-      }
+                            <div id="eth-address"
+                                class="d-md-none text-wakanda-light-yellow poppins-font text-overflow-ellipsis transparent-white px-4 py-2 m-0 ">
+                                0x54...0d1
+                            </div>
 
-      .chart-section h1 {
-        margin-bottom: 1em;
-      }
-      .chart-and-info {
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-      .chart-and-info .btn {
-        text-align: center;
-        overflow-wrap: break-word;
-        display: flex;
-        flex-direction: column;
-        font-size: 0.68em;
-        flex: 0 0 8em;
-        max-width: 8em;
-        margin-bottom: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .roadmap-section {
-        padding-right: 0;
-        padding-left: 0;
-        background-image: url(assets/images/5550761-copy.jpg);
-        background-position-x: 40%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-      }
-      .roadmap-section h1 {
-        margin-bottom: 1.25em;
-      }
-      .roadmap-card {
-        background-color: rgba(58, 58, 58, 0.5);
-        border-radius: 20px;
-        box-shadow: 6px 7px 4px 3px rgba(0, 0, 0, 0.25);
-        padding: 0;
-        padding-bottom: 1em;
-        position: relative;
-      }
-      .roadmap-card:not(:last-of-type) {
-        margin-bottom: 2em;
-      }
-      .roadmap-card {
-        padding-top: 1.5em;
-      }
-      .roadmap-card ul {
-        line-height: 2.25;
-        font-size: 0.8em;
-        color: #fff;
-        padding-right: 1em;
-      }
-      .roadmap-card ul {
-        padding-right: 0.5em;
-      }
-      .roadmap-card li {
-        letter-spacing: 0.1em;
-      }
-      .roadmap-card li.done:after {
-        content: "";
-        background-image: url(assets/images/bi_shield-fill-check.svg);
-        background-repeat: no-repeat;
-        display: inline-block;
-        width: 13px;
-        height: 13px;
-        margin-left: 0.25em;
-        background-size: 13px;
-      }
-      .roadmap-card:nth-child(even) h3 {
-        text-align: right;
-      }
-      .roadmap-card-section {
-        max-width: 90%;
-      }
-
-      @media (min-width: 450px) {
-        .chart-and-info .btn {
-          flex-basis: 30%;
-          max-width: 30%;
-          font-size: 0.8em;
-          padding-left: 0;
-          padding-right: 0;
-        }
-      }
-
-      @media (min-width: 600px) {
-        .contract-address .tabs .btn {
-          flex:  0 0 40%;
-        }
-        .chart-and-info .btn {
-          flex-basis: 22%;
-          max-width: 22%;
-          font-size: 0.7em;
-        }
-        .exchange-logo-section img {
-          width: 40%;
-        }
-      }
-
-      @media (min-width: 768px) {
-        .hero {
-          flex-direction: row;
-          min-height: 600px;
-        }
-        .hero .logo {
-          order: 2;
-          width: 70%;
-        }
-        .hero .subsection *:not(.paper-link) {
-          text-align: left;
-          max-width: 95%;
-        }
-
-        .news-section div {
-          max-width: 85%;
-        }
-
-        .contract-address .btn .tooltiptext {
-          left: 25%;
-        }
-
-        .roadmap-section {
-          background-position-x: 60%;
-        }
-        .roadmap-card-section {
-          position: relative;
-          max-width: 100%;
-        }
-
-        .exchange-list {
-          flex: 0 0 20%;
-        }
-
-        .roadmap-card {
-          text-align: left;
-          left: 54%;
-          width: 40%;
-          padding-top: 1em;
-        }
-        .roadmap-card:nth-child(even) {
-          left: 115px;
-        }
-
-        .tokenomics-section .mobile {
-          display: none;
-        }
-        .tokenomics-section .desktop {
-          display: block;
-        }
-      }
-
-      @media (min-width: 992px) {
-        .exchange-list-section {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-        }
-        .exchange-list {
-          flex: 0 0 20%;
-        }
-        .exchange-logo-section {
-          flex: 0 0 45%;
-        }
-        .exchange-logo-section img {
-          width: 80%;
-        }
-        .exchange-list {
-          display: block;
-          font-size: 1.25em;
-        }
-        .exchange-list li:not(:last-of-type) {
-          margin-bottom: 0.5em;
-        }
-
-        .contract-address {
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-        }
-        .contract-address textarea {
-          flex: 1 1 70%;
-          height: 1em;
-          padding-top: 2em;
-          padding-bottom: 2em;
-          overflow: hidden;
-        }
-        .contract-address a {
-          flex: 1 1 25%;
-          padding: 1em;
-          order: -1;
-        }
-
-        .roadmap-section {
-          background-position-x: 80%;
-        }
-      }
-    </style>
-    <link
-      rel="preload"
-      href="assets/css/non-critical.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV82FE1Z5F"></script>
+                            <div onclick="copyToClipboard('0x5444c30210d8a0a156178cfb8048b4137c0d40d1')"
+                                class="wakanda-light-yellow text-white poppins-font fw-bolder border-radius-end-lg m-0 px-3 py-2 ">
+                                <img class="" src="img/copy-icon.svg" alt="wkd-logo" width="14" height="14">
+                                <span class="d-none d-lg-inline-block">COPY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-auto">
+                        <div class="col-12 col-sm-3 my-3">
+                            <a target="_blank" href="https://www.coingecko.com/en/coins/wakanda-inu"> <img
+                                    class="img-fluid" src="img/logo-coingecko.svg" alt="coingecko-logo"> </a>
+                        </div>
+                        <div class="col-12 col-sm-3 my-3">
+                            <a target="_blank" href="https://coinmarketcap.com/currencies/wakanda-inu/"> <img
+                                    class="img-fluid" src="img/coinmarketcap-logo.svg" alt="coinmarketcap-logo"> </a>
+                        </div>
+                        <div class="col-12 col-sm-3 my-3">
+                            <a target="_blank"
+                                href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d">
+                                <img class="img-fluid" src="img/PancakeSwap-Crypto-Logo-PNG-Pic.svg"
+                                    alt="pancakeswap-logo">
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-3 my-3">
+                            <a target="_blank"
+                                href="https://www.dextools.io/app/bsc/pair-explorer/0xf19f176605cb4a8da8cd6c97e36f649426e2b1a1">
+                                <img class="img-fluid" src="img/dextools_logo_full_dark.svg" alt="dextools-logo"> </a>
+                        </div>
+                    </div>
+                    <div class="row mx-auto">
+                        <div class="col">
+                            <p class="poppins-font text-wakanda-yellow text-small-2"> <span class="fw-bolder">
+                                    DISCLAIMER:
+                                </span> WAKANDA INU is a decentralized experiment and, as such, we always incentivize
+                                the
+                                use of DEXs. If you choose to utilize a CEX instead, remember to research it first to
+                                ensure
+                                it is both safe and secure. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="community" class="row wakanda-gray-600 py-5">
+                <div class="row d-flex justify-content-center text-break pt-4">
+                    <div class="col-11 col-md-8 text-center">
+                        <h2 class="text-white inter-font fw-bolder my-4">
+                            100K+ COMMUNITY DRIVEN </h2>
+                        <p class="text-wakanda-yellow poppins-font fw-bold fst-italic">
+                            Our Ecosystem is as successful as our thriving community. Please follow our social
+                            platforms to get the most up-to-date, accurate WAKANDA INU information. </p>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mx-auto my-5 pb-5 social-icons">
+                    <div class="col-2 col-md-1 d-flex justify-content-center">
+                        <a target="_blank" href="https://fb.me/Wakandainu"> <img class="img-fluid"
+                                src="img/facebook-icon.svg" alt="fb-logo" /> </a>
+                    </div>
+                    <div class="col-2 col-md-1 d-flex justify-content-center">
+                        <a target="_blank" href="https://twitter.com/Wakandainu"> <img class="img-fluid"
+                                src="img/twitter-icon.svg" alt="tw-logo" /> </a>
+                    </div>
+                    <div class="col-2 col-md-1 d-flex justify-content-center">
+                        <a target="_blank" href="https://t.me/wakandainu"> <img class="img-fluid"
+                                src="img/telegram-icon.svg" alt="telegram-logo" /> </a>
+                    </div>
+                    <div class="col-2 col-md-1 d-flex justify-content-center">
+                        <a target="_blank" href="https://www.youtube.com/channel/UCYt2BSX8B-opFtMKzCVrqoQ"> <img
+                                class="img-fluid" src="img/youtube-icon.svg" alt="youtube-logo" /> </a>
+                    </div>
+                    <div class="col-2 col-md-1 d-flex justify-content-center">
+                        <a target="_blank" href="https://www.instagram.com/wakandainu/"> <img class="img-fluid"
+                                src="img/instagram-icon.svg" alt="instagram-logo" /> </a>
+                    </div>
+                    <div class="col-2 col-md-1 d-flex justify-content-center">
+                        <a target="_blank" href="https://wakandainu.medium.com/"> <img class="img-fluid"
+                                src="img/medium-icon.svg" alt="medium-logo" /> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0">
+        <footer class="wakanda-dark footer-section p-md-5 ">
+            <div class="row p-md-5 py-5 mx-0 ">
+                <div class="col-12 col-md-4 mt-4 order-2 order-md-1 d-sm-flex d-flex justify-content-center">
+                    <img class="img-fluid" src="img/wakanda-logo-words.svg" alt="wakanda-logo" />
+                </div>
+                <div class="col-12 col-md-8 my-auto order-md-2 pb-5">
+                    <div class="row">
+                        <div class="col-4 col-md-3">
+                            <h5 class="text-white inter-font fw-bold">
+                                FEATURES </h5>
+                            <a target="_blank"
+                                href="https://www.dextools.io/app/en/bnb/pair-explorer/0xf19f176605cb4a8da8cd6c97e36f649426e2b1a1"
+                                class="no-decoration">
+                                <p class="text-white fw-light">
+                                    Live Chart </p>
+                            </a>
+                            <a target="_blank"
+                                href="https://www.bscscan.com/token/0x5344c20fd242545f31723689662ac12b9556fc3d"
+                                class="no-decoration">
+                                <p class="text-white fw-light">
+                                    BscScan </p>
+                            </a>
+                            <a target="_blank"
+                                href="https://etherscan.io/token/0x5444c30210d8a0a156178cfb8048b4137c0d40d1"
+                                class="no-decoration">
+                                <p class="text-white  fw-light">
+                                    EtherScan </p>
+                            </a>
+                            <!-- <a target="_blank" href="https://digitalcoinprice.com/coins/wakanda-inu"
+                                class="no-decoration">
+                                <p class="text-white fw-light">
+                                    Ranking </p>
+                            </a> -->
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <h5 class="text-white inter-font fw-bold">
+                                PRODUCTS </h5>
+                            <a target="_blank" href="https://dex.wakandainu.com/" class="no-decoration">
+                                <p class="text-white fw-light">
+                                    Swap</p>
+                            </a>
+                            <a target="_blank" href="https://dex.wakandainu.com/pools" class="no-decoration">
+                                <p class="text-white fw-light">
+                                    Stake </p>
+                            </a>
+                            <a target="_blank" href="#" class="no-decoration">
+                                <p class="text-white  fw-light">
+                                    Launchpad (Coming Soon) </p>
+                            </a>
+                            <a target="_blank" href="#" class="no-decoration">
+                                <p class="text-white fw-light">
+                                    NFT Marketplace (Coming Soon) </p>
+                            </a>
+                        </div>
+                        <div class="col-3 col-md-3">
+                            <h5 class="text-white inter-font fw-bold">
+                                LINKS </h5>
+                            <a target="_blank" href="https://snapshot.org/#/wakandainu.eth" class="no-decoration">
+                                <p class="text-white fw-light">
+                                    Governance </p>
+                            </a>
+                            <p class="text-white fw-light">
+                                Disclaimer </p>
+                            <a target="_blank" href="https://youtu.be/SZhMmu8fpQ0" class="no-decoration">
+                                <p class="text-white  fw-light">
+                                    Community project </p>
+                            </a>
+                            <a target="_blank" href="https://www.certik.org/projects/wakanda-inu" class="no-decoration">
+                                <p class="text-white fw-light">
+                                    Audit </p>
+                            </a>
+                        </div>
+                        <div class="col-3 col-md-3">
+                            <h5 class="text-white inter-font fw-bold">
+                                CONTACTS </h5>
+                            <a target="_blank" href="partners@wakandainu.com" class="no-decoration">
+                                <p class="text-white fw-light">
+                                    Partnership </p>
+                            </a>
+                            <a target="_blank" href="press@wakandainu.com" class="no-decoration">
+                                <p class="text-white fw-light">
+                                    Press Inquiries </p>
+                            </a>
+                            <p class="text-white  fw-light">
+                                Press kit </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row px-0 px-md-5">
+                <div class="col-12 px-md-5">
+                    <p class="text-white text-small-2 text-center text-md-end"> <img class="img-fluid"
+                            src="img/wakandainu-logo%201.svg" alt="wakanda-logo" width="15" height="15" />
+                        © 2022 Wakanda Inu </p>
+                    <p class="text-white text-small-2 text-center text-md-end">
+                        All contents of this document, unless otherwise credited, are copyright ©2022 Wakanda Inu </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Javascript section here -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZV82FE1Z5F');
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        function copyToClipboard(value) {
+            navigator.clipboard.writeText(value)
+            let popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+            setTimeout(() => {
+                popup.classList.toggle("show");
+            }, 3000);
+        }
     </script>
-    <noscript>
-      <link rel="stylesheet" href="assets/css/non-critical.css" />
-    </noscript>
-  </head>
-
-  <body>
-    <!-- page-header -->
-    <header class="page-header">
-      <a href="index.html" class="home-link">
-        <img
-          class="logo"
-          src="assets/images/wakanda-inu-logo.svg"
-          alt="wakanda inu logo"
-          width="50"
-          height="50"
-        />
-        <div class="logo-text">
-          <span class="text-primary">Wakanda Inu</span>
-          <span>The African Dog</span>
-        </div>
-      </a>
-      <button class="hamburger-btn">
-        <img
-          src="assets/images/menu-hamburger.svg"
-          width="50"
-          height="50"
-          alt="menu toggle button"
-        />
-      </button>
-      <nav class="">
-        <button>close</button>
-        <a
-          href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Buy</a
-        >
-        <a href="nft-marketplace.html">NFT Marketplace</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a
-          href="https://snapshot.org/#/wakandainu.eth"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vote
-        </a>
-        <a href="assets/PANTHERS-WORDS.pdf" id="panthersword" target="_blank"
-          >Panthers Word</a
-        >
-        <a href="#roadmap">Roadmap</a>
-      </nav>
-    </header>
-    <!-- /page-header -->
-
-    <main>
-      <!-- hero -->
-      <section class="hero text-center">
-        <img
-          class="logo"
-          src="assets/images/wakanda-inu-logo.svg"
-          alt="logo"
-          width="333"
-          height="333"
-        />
-        <div class="subsection">
-          <p
-            class="
-              font-weight-bold font-beyno
-              text-primary-light text-uppercase
-            "
-          >
-            Wakanda Inu
-          </p>
-          <h1 class="text-uppercase">
-            A Decentralized Meme Token for the
-            <span class="font-beyno font-weight-normal">african inu</span>
-          </h1>
-          <p>
-            Built as a charity-oriented meme token that is completely for
-            charity good across the globe. Welcome to
-            <span class="font-beyno text-primary-light">WAKANDA INU</span>
-          </p>
-          <div class="">
-            <a
-              href="assets/PANTHERS-WORDS.pdf"
-              id="panthersword"
-              class="btn btn-primary paper-link font-beyno"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Panthers Words
-            </a>
-            <a
-              href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary paper-link font-beyno"
-            >
-              buy wkd
-            </a>
-          </div>
-        </div>
-      </section>
-      <!-- /hero -->
-
-      <!-- waitlist-section -->
-      <section class="waitlist-section text-center">
-        <h1 class="font-beyno font-weight-normal header-border-bottom">
-          The World needs<br /><span class="text-primary">$WKD</span>
-        </h1>
-        <p>
-          From the depth of humanity,
-          <span class="font-beyno text-primary-light font-weight-normal"
-            >WAKANDA INU</span
-          >
-          represents the best aspects of what it means to be alive and part of a
-          community with a single purpose.
-        </p>
-        <a href="nft-marketplace.html" class="btn btn-secondary font-beyno">
-          nft marketplace
-        </a>
-      </section>
-      <!-- /waitlist-section -->
-
-      <!-- tokenomics -->
-      <section id="tokenomics" class="tokenomics-section">
-        <div class="mobile">
-          <img
-            src="assets/images/tokenomics-chart.png"
-            loading="lazy"
-            width="547"
-            height="467"
-            alt="tokenomics chart"
-          />
-          <img
-            src="assets/images/tokenomics-legend.png"
-            loading="lazy"
-            width="511"
-            height="806"
-            alt="tokenomics chart key/legend"
-          />
-        </div>
-        <div class="desktop">
-          <img
-            src="assets/images/tokenomics-full.png"
-            loading="lazy"
-            width="1394"
-            height="806"
-            alt="tokenomics full chart"
-          />
-        </div>
-      </section>
-
-      <!-- exchanges -->
-      <section class="exchanges">
-        <h1
-          class="
-            font-weight-normal
-            text-center text-primary-light
-            header-border-bottom
-          "
-        >
-          12 <span class="font-beyno">exchanges and counting</span>
-        </h1>
-        <div class="exchange-list-section">
-          <div class="exchange-list">
-            <ol>
-              <li>
-                <a
-                  href="https://pancakeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Pancakeswap</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.hotbit.io/exchange?symbol=WKD_USDT"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >HotBit</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.bkex.com/trade/WKD_USDT"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >BKEX</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.ztb.im/exchange?coin=WKD_USDT"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Zt Global</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://app.apeswap.finance/swap?outputCurrency=0x5344C20FD242545F31723689662AC12b9556fC3d"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Apeswap</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://boundlesspay.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Boundlesspay</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.quidax.com/markets/wkdusdt"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >QUIDAX</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://obiex.finance"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >ObieX</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://roqqu.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Roqqu</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.flitaa.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Flitaa</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.hagglex.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >HaggleX</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://exchange.tatswap.com/#/swap"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Tatswap</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://naijacrypto.com/exchange/WKD_NGN"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Naijacrypto</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.bitget.com/en/spot/WKDUSDT_SPBL"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Bitget</a
-                >
-              </li>
-            </ol>
-          </div>
-          <div class="exchange-logo-section">
-            <img src="assets/images/exchanges.png" alt="exchange list logos" />
-          </div>
-        </div>
-        <div class="exchange-disclaimer">
-          <h3>DISCLAIMER:</h3>
-          <p>
-            <span class="font-beyno text-primary-light">WAKANDA INU</span> is a
-            decentralized experiment and, as such, we always incentivize the use
-            of DEXs. If you choose to utilize a CEX instead, remember to
-            research it first to ensure it is both safe and secure.
-          </p>
-        </div>
-        <div class="contract-address">
-          <div class="tabs">
-            <a href="#" class="btn btn-primary font-beyno current" data-tab-key="bsc">bsc</a>
-            <a href="#" class="btn btn-primary font-beyno" data-tab-key="eth">eth</a>
-          </div>
-          <textarea
-            class="text-center"
-            autocorrect="off"
-            spellcheck="false"
-            readonly
-          >0x5344c20fd242545f31723689662ac12b9556fc3d</textarea>
-          <a href="#copy" class="btn btn-primary font-beyno text-center">
-            <span>
-              <span class="tooltiptext">Copied!</span>
-              <span>copy contract address</span>
-            </span>
-            <img src="assets/images/akar-icons_copy.svg" />
-          </a>
-        </div>
-      </section>
-      <!-- /exchanges -->
-
-      <!-- chart-info -->
-      <section class="chart-section">
-        <h1
-          class="
-            font-beyno font-weight-normal
-            text-center text-primary-light
-            header-border-bottom
-          "
-        >
-          view chart and info
-        </h1>
-        <div class="chart-and-info text-uppercase font-beyno">
-          <a
-            href="https://www.coingecko.com/en/coins/wakanda-inu"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >coingecko</a
-          >
-          <a
-            href="https://www.dextools.io/app/bsc/pair-explorer/0xf19f176605cb4a8da8cd6c97e36f649426e2b1a1"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >dextools</a
-          >
-          <a
-            href="https://icoholder.com/en/wakanda-inu-1006845"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >icoholder</a
-          >
-          <a
-            href="https://coinmarketcap.com/currencies/wakanda-inu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >coinmarketcap</a
-          >
-          <a
-            href="https://poocoin.app/tokens/0x5344c20fd242545f31723689662ac12b9556fc3d"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >poocoin</a
-          >
-          <a
-            href="https://digitalcoinprice.com/coins/wakanda-inu"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >digitalcoin</a
-          >
-          <a
-            href="https://www.certik.org/projects/wakanda-inu"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-          >
-            certik audit
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >blockfolio</a
-          >
-          <a
-            href="https://coinstats.app/coins/wakanda-inu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >coinstats</a
-          >
-          <a
-            href="https://www.coinbase.com/price/wakanda-inu"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >coinbase</a
-          >
-          <a
-            href="https://etherscan.io/token/0x5444c30210d8a0a156178cfb8048b4137c0d40d1"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >etherscan</a
-          >
-          <a
-            href="https://www.bscscan.com/token/0x5344c20fd242545f31723689662ac12b9556fc3d"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            >bscscan</a
-          >
-        </div>
-      </section>
-      <!-- /chart-info -->
-
-      <!-- news-section -->
-      <section class="news-section">
-        <h1
-          class="
-            font-beyno font-weight-normal
-            text-center text-primary-light
-            header-border-bottom
-          "
-        >
-          as seen in the news
-        </h1>
-        <div>
-          <a
-            href="https://cryptotvplus.com/2021/11/africas-first-community-driven-meme-token-wakanda-inu-wkd/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              src="assets/images/news/cryptotv-plus 1.png"
-              width="202"
-              height="159"
-            />
-          </a>
-          <a
-            href="https://icoholder.com/en/wakanda-inu-1006845"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              src="assets/images/news/ico holder 1.png"
-              width="327"
-              height="156"
-            />
-          </a>
-          <a
-            href="https://www.globenewswire.com/news-release/2021/11/20/2338557/0/en/First-African-Meme-Token-Wakanda-Inu-Launched-As-Charity-Coin-In-November-2021.html"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              src="assets/images/news/globenewswire 1.png"
-              width="367"
-              height="125"
-            />
-          </a>
-          <a
-            href="https://coinmarketbag.com/how-to-buy-wakanda-inu-on-pancakeswap/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              src="assets/images/news/coinmarketbag 1.png"
-              width="462"
-              height="88"
-            />
-          </a>
-          <a
-            href="https://finance.yahoo.com/news/first-african-meme-token-wakanda-035800926.html"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              src="assets/images/news/YahooFinanceLogo 1.png"
-              width="278"
-              height="102"
-            />
-          </a>
-          <a
-            href="https://techcabal.com/2021/11/12/obiex-finance-lists-wakanda-inu-and-launches-ngnx-p2p-for-easy-access-to-naira/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              src="assets/images/news/tclogo-desktop 1.png"
-              width="505"
-              height="102"
-            />
-          </a>
-          <a
-            href="https://techpoint.africa/2021/11/16/meme-coins-and-wakanda-inu/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              src="assets/images/news/Techpoint 1.png"
-              width="456"
-              height="109"
-            />
-          </a>
-          <a
-            href="https://disruptmagazine.com/all-you-need-to-know-about-wakanda-inu-wkd/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              src="assets/images/news/disrupt-podcast-magazine-logo-1 1.png"
-              width="478"
-              height="105"
-            />
-          </a>
-        </div>
-      </section>
-      <!-- /news-section -->
-
-      <!-- roadmap-section -->
-      <section id="roadmap" class="roadmap-section">
-        <h1
-          class="
-            font-beyno font-weight-normal
-            text-center text-primary-light
-            header-border-bottom
-          "
-        >
-          WAKANDA INU FOREVER
-        </h1>
-        <div class="roadmap-card-section">
-          <div class="roadmap-card">
-            <ul>
-              <li class="done">Building the ecosystem.</li>
-              <li class="done">Core team developer and other units.</li>
-              <li class="done">Website launch.</li>
-              <li class="done">Public Sale.</li>
-              <li class="done">PancakeSwap listing.</li>
-            </ul>
-          </div>
-          <div class="roadmap-card">
-            <ul>
-              <li class="done">Liquidity provider and locking.</li>
-              <li class="done">Token burn.</li>
-              <li class="done">Coingecko and coinmarketcap listing.</li>
-              <li class="done">Auditing.</li>
-              <li class="done">
-                Marketing, referral campaign, advertising and promotion, KOL,
-                Wakanda Inu Machinery, Wakanda Inu legend, Wakanda Inu panther.
-              </li>
-            </ul>
-          </div>
-          <div class="roadmap-card">
-            <ul>
-              <li class="done">Centralized exchange discussion and listing.</li>
-              <li>
-                Community vote on what to build among (NFT, FARMING, STAKING,
-                DEX, etc).
-              </li>
-              <li>
-                Create token Bridge to swap
-                <span class="text-primary-light font-beyno">$WKD</span>
-                from BSC to other Chain (ETH, SOL, AVAX, POLYGON, FTM etc)
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- /roadmap-section -->
-
-      <!-- community-section -->
-      <section id="community" class="community-section">
-        <div class="community-section-content">
-          <div class="community-section-heading">
-            <h1
-              class="
-                font-beyno font-weight-normal
-                text-center text-primary-light
-                header-border-bottom
-              "
-            >
-              community driven
-            </h1>
-          </div>
-          <div class="certification-image-container">
-            <a
-              href="https://www.certik.org/projects/wakanda-inu"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><img src="assets/images/certik-audit.png"
-            /></a>
-          </div>
-        </div>
-        <p class="text-left">
-          <span class="font-beyno text-primary-light">WAKANDA INU</span> as a
-          community grows stronger every day. Please follow our social platforms
-          to get the most up-to-date, accurate WAKANDA INU information.
-        </p>
-        <div class="community-link-subsection">
-          <a
-            href="https://t.me/wakandainu"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="community-link"
-          >
-            <img
-              src="assets/images/logos-telegram.svg"
-              alt="Telegram logo"
-              loading="lazy"
-              width="35"
-              height="35"
-            />
-            <span>Telegram</span>
-          </a>
-          <a
-            href="https://twitter.com/Wakandainu"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="community-link"
-          >
-            <img
-              src="assets/images/logos-twitter.svg"
-              alt="Twitter logo"
-              loading="lazy"
-              width="35"
-              height="35"
-            />
-            <span>Twitter</span>
-          </a>
-          <a
-            href="https://fb.me/Wakandainu"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="community-link"
-          >
-            <img
-              src="assets/images/logos-facebook.svg"
-              alt="Facebook logo"
-              loading="lazy"
-              width="35"
-              height="35"
-            />
-            <span>Facebook</span>
-          </a>
-          <a
-            href="https://wakandainu.medium.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="community-link"
-          >
-            <img
-              src="assets/images/logos-medium.svg"
-              alt="Medium logo"
-              loading="lazy"
-              width="35"
-              height="35"
-            />
-            <span>Medium</span>
-          </a>
-        </div>
-        <div class="partnership-subsection">
-          <a
-            href="mailto:partners@wakandainu.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="community-link"
-          >
-            <img src="assets/images/logos-mail.svg" />
-            <span>partnership</span>
-          </a>
-        </div>
-      </section>
-      <!-- /community-section -->
-    </main>
-
-    <!-- footer -->
-    <footer>&copy; <span class="font-beyno">Copyright</span> 2021</footer>
-    <!-- /footer -->
-
+    <!-- code for splider js package -->
     <script>
-      document
-        .querySelector(".contract-address > a")
-        .addEventListener("click", function (event) {
-          event.preventDefault();
-          this.previousElementSibling.select();
-          document.execCommand("copy");
-          this.classList.add("active");
-          this.focus();
-          var that = this;
-          setTimeout(function () {
-            that.classList.remove("active");
-          }, 600);
-        });
-
-      var tabBtns = document.querySelectorAll('.tabs .btn');
-      var contractAddressTextArea = document.querySelector('.contract-address textarea');
-      var addresses = {
-        bsc: '0x5344c20fd242545f31723689662ac12b9556fc3d',
-        eth: '0x5444c30210d8a0a156178cfb8048b4137c0d40d1'
-      };
-
-      tabBtns.forEach(function (btn) {
-        btn.addEventListener('click', function (event) {
-          event.preventDefault();
-
-          var that = this;
-          tabBtns.forEach(function (b) {
-            b.classList.remove('current');
-            that.classList.add('current');
-            contractAddressTextArea.textContent = addresses[that.dataset.tabKey];
-          });
-        });
-      });
+        new Splide('.splide', {
+            arrows: false,
+        }).mount();
     </script>
-    <script src="assets/js/main.js"></script>
-  </body>
+</body>
+
 </html>
